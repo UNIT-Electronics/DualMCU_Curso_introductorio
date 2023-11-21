@@ -1,5 +1,5 @@
 ---
-title: 4. Sensor de termperatura
+title: 4.  Sensor de termperatura (ADC)
 type: docs
 weight: 4
 BookToC: false
@@ -107,3 +107,4 @@ while True:
 Puedea apreciar dentro de tu monitor serie, el valor de la temperatura en grados centigrados.
 ![](/docs/4-Sensor_de_temperatura/images/sensor.png)
 
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.

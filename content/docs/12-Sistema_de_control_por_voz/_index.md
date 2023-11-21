@@ -13,10 +13,8 @@ El objetivo de este proyecto es utilizar un microcontrolador DualMCU para crear 
 
 **Las metas incluyen:**
 
-Utilizar módulos de reconocimiento de voz para captar y procesar comandos hablados por los usuarios.
 Programar el microcontrolador para realizar acciones específicas en respuesta a los comandos de voz.
-Proporcionar una interfaz de usuario para configurar comandos y respuestas personalizadas.
-Ofrecer flexibilidad para la expansión y personalización del sistema.
+
 
 ###     12.2 Descripción
 
@@ -45,3 +43,4 @@ Código Fuente: Este repositorio incluirá el código necesario para programar e
 **Recursos Adicionales:** Se pueden incluir enlaces a recursos adicionales, como tutoriales sobre el uso de módulos de reconocimiento de voz y consejos para mejorar la precisión del sistema.
 
 
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.

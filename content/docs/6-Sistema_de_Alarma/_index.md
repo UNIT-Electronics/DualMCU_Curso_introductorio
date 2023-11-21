@@ -1,5 +1,5 @@
 ---
-title: 6. Sistema de alarma
+title: 6. Sistema de alarma (INPUT) 
 type: docs
 weight: 6
 BookToC: false
@@ -10,11 +10,10 @@ BookToC: false
 ## 6. Sistema de alarma
 ### 6.1. Objetivo
 Crear un sistema de alarma utilizando un microcontrolador y un sensor de
-movimiento. Cuando se detecte movimiento, el sistema puede activar una alarma sonora o enviar una
-notificación a través de una comunicación inalámbrica, como Bluetooth o Wi-Fi.
+movimiento. Cuando se detecte movimiento, el sistema puede activar una alarma sonora.
 
 ### 6.2. Descripción
-Este repositorio contiene un conjunto de recursos y código para construir un sistema de detección utilizando un dispositivo ESP32 o RP2040 con MicroPython. Los sistemas de alarma son fundamentales para mantener seguro un espacio o propiedad. Con MicroPython, puedes crear un sistema de alarma personalizado que se adapte a tus necesidades específicas.
+La documentación presente contiene un conjunto de recursos y código para construir un sistema de detección utilizando un dispositivo ESP32 o RP2040 con MicroPython. Los sistemas de alarma son fundamentales para mantener seguro un espacio o propiedad. Con MicroPython, puedes crear un sistema de alarma personalizado que se adapte a tus necesidades específicas.
 
 ### 6.3 Requisitos
 + 1x Placa de desarrollo [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
@@ -23,7 +22,7 @@ Este repositorio contiene un conjunto de recursos y código para construir un si
 + Conexiones eléctricas y fuente de alimentación adecuadas.
 
 ### 6.4 Contenido del Repositorio
-**Código Fuente:** En este repositorio, encontrarás el código fuente necesario para manejar el sensor de movimiento y activar una alarma sonora. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
+**Código Fuente:** En este apartado, encontrarás el código fuente necesario para manejar el sensor de movimiento y activar una alarma sonora. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
 
 ```python
  
@@ -52,7 +51,9 @@ while True:
 
 
 ```
-**Recursos Adicionales:** Se pueden incluir enlaces a recursos adicionales, como tutoriales sobre el uso de sensores específicos y consejos para mejorar la calidad del aire.
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
+
+**Recursos Adicionales:**
 
 
 Puedes mejorar tu habilidad complemtando el siguiente proyecto: [DualMCU_ESP32_Panel_de_control_Web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)

@@ -9,14 +9,16 @@ BookToC: false
 
 ## 7. Control de motores DC
 ### 7.1. Objetivo
-Diseñar un sistema de control de motores de corriente continua (DC) con un microcontrolador. Se puede programar un robot pequeño.
+Diseñar un sistema de control de motores de corriente continua (DC) con un microcontrolador. 
 
 
 ### 7.2. Descripción
 Controlar la velocidad y dirección de los motores DC de manera precisa.
-Implementar un sistema de control que permita que el robot se mueva de manera autónoma o en respuesta a comandos externos.
-Proporcionar una interfaz de usuario para personalizar el comportamiento del robot.
-Ofrecer flexibilidad para la expansión y personalización del sistema de control.
+
+#### 7.2.1 Aplicación 
+- Implementar un sistema de control que permita que el robot se mueva de manera autónoma o en respuesta a comandos externos.
+- Conexión con interfaz de usuario para personalizar el comportamiento del robot.
+- Flexibilidad para la expansión y personalización del sistema de control.
 
 ### 7.3 Requisitos
 + 1x Placa de desarrollo [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
@@ -31,34 +33,71 @@ Contenido del Repositorio
 
 + **Código Fuente:** El repositorio incluirá el código necesario para programar el microcontrolador y controlar los motores DC.
 
+Puedes controlar un motor de corriente continua (DC) con el controlador L298N sin usar PWM, pero esto significa que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad. 
+Aquí tienes un ejemplo de cómo hacerlo en MicroPython para el RP2040:
+
+```python
+from machine import Pin
+
+# Configura los pines para controlar el L298N
+l298n_enable = Pin(4, Pin.OUT)  # Conecta a EN del L298N
+l298n_input1 = Pin(12, Pin.OUT)  # Conecta a IN1 del L298N
+l298n_input2 = Pin(13, Pin.OUT)  # Conecta a IN2 del L298N
+
+# Habilita el motor
+l298n_enable.on()
+
+# Control del motor
+l298n_input1.on()  # Motor en un sentido
+l298n_input2.off()  # Motor en el otro sentido
+```
+
+Este código hará que el motor gire en un sentido a toda velocidad. Si quieres cambiar la dirección del motor, puedes intercambiar los estados de `l298n_input1` y `l298n_input2`.
+
+El cambio si lo prefieres puedes controlar la velocidad con la que puedas moverte, el uso del PWM puedes ser una alternativa. 
 ```python
 
 from machine import Pin, PWM
 
-# Configura los pines para controlar el LD298
-ld298_enable1 = Pin(4, Pin.OUT)  # Conecta a EN1 del LD298
-ld298_enable2 = Pin(5, Pin.OUT)  # Conecta a EN2 del LD298
-ld298_input1 = PWM(Pin(12, Pin.OUT))  # Conecta a IN1 del LD298
-ld298_input2 = PWM(Pin(13, Pin.OUT))  # Conecta a IN2 del LD298
-ld298_input3 = PWM(Pin(14, Pin.OUT))  # Conecta a IN3 del LD298
-ld298_input4 = PWM(Pin(15, Pin.OUT))  # Conecta a IN4 del LD298
+# Configura los pines para controlar el L298N
+l298n_enable = Pin(4, Pin.OUT)  # Conecta a EN del L298N
+l298n_input1 = PWM(Pin(12, Pin.OUT))  # Conecta a IN1 del L298N
+l298n_input2 = PWM(Pin(13, Pin.OUT))  # Conecta a IN2 del L298N
 
-# Habilita los motores
-ld298_enable1.on()
-ld298_enable2.on()
+# Habilita el motor
+l298n_enable.on()
 
-# Define la velocidad de los motores (ajusta el valor según sea necesario)
+# Define la velocidad del motor (ajusta el valor según sea necesario)
 motor_speed = 512
 
-ld298_input1.duty(motor_speed)  # Motor 1 en sentido horario
-ld298_input2.duty(0)  # Motor 1 en sentido antihorario
-ld298_input3.duty(motor_speed)  # Motor 2 en sentido horario
-ld298_input4.duty(0)  # Motor 2 en sentido antihorario
+# Control del motor
+l298n_input1.duty(motor_speed)  # Motor en un sentido
+l298n_input2.duty(0)  # Motor en el otro sentido
 
 
 ```
 
+
+
+### 5.5 Instrucciones de Uso
+
+1. Importa las clases `Pin` y `PWM` del módulo `machine`.
+2. Configura los pines GPIO para controlar el L298N. Los pines EN1 y EN2 del L298N se conectan a los pines GPIO 4 y 5 del ESP32, respectivamente. Los pines IN1, IN2, IN3 e IN4 del L298N se conectan a los pines GPIO 12, 13, 14 y 15 del ESP32, respectivamente.
+3. Habilita los motores configurando los pines EN1 y EN2 en alto.
+4. Define la velocidad de los motores ajustando el ciclo de trabajo de los pines PWM. En este caso, la velocidad del motor se establece en 512 (en una escala de 0 a 1023).
+5. Controla los motores ajustando el ciclo de trabajo de los pines IN1, IN2, IN3 e IN4. Para hacer girar un motor en sentido horario, configura el ciclo de trabajo del pin correspondiente a la velocidad del motor y el otro pin a 0. Para hacer girar un motor en sentido antihorario, haz lo contrario.
 ```python
+
+'''
+Unit Electronics 2023
+       (o_
+(o_    //\
+(/)_   V_/_ 
+
+version: 0.0.1
+revision: 0.0.1
+context: This code is a basic configuration of a servo motor
+'''
 from machine import Pin, PWM
 
 # Configura los pines para controlar el LD298
@@ -102,13 +141,11 @@ ld298_input4.duty(0)  # Motor 2 en sentido antihorario
 # ld298_input7.duty(motor_speed2)
 # ld298_input8.duty(0)
 
+
 ```
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
 
-
-
-
-+ **Recursos Adicionales:** Se pueden incluir enlaces a recursos adicionales, como tutoriales sobre el uso de sensores, programación de movimientos autónomos y consejos para la mejora del rendimiento del robot.
 
 
 

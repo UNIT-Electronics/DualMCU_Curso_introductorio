@@ -1,5 +1,5 @@
 ---
-title: 3. Led intermitente
+title: 3. Led intermitente (OUTPUT) 
 type: docs
 weight: 3
 BookToC: false
@@ -81,3 +81,5 @@ while True:
 Puedes personalizar estos ejemplos según tus necesidades y cargarlos en las respectivas placas. Asegúrate de seguir las instrucciones en el repositorio para configurar correctamente el entorno de desarrollo para MicroPython en cada placa antes de cargar el código.
 
 También encontrarás un ejemplo de un código en el repositorio oficial: [blink.py](https://github.com/UNIT-Electronics/DualMCU/blob/main/Examples/Micropython%20Basics/RP2040/00.LEDs/blink.py)
+
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.

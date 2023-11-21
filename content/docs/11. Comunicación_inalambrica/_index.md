@@ -52,3 +52,5 @@ El repositorio incluirá código fuente, ejemplos de proyectos y documentación 
 **Recursos Adicionales:** Se pueden incluir enlaces a tutoriales y documentación relevante sobre las tecnologías de comunicación inalámbrica utilizadas.
 
  
+
+ > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
