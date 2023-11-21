@@ -14,39 +14,49 @@ movimiento. Cuando se detecte movimiento, el sistema puede activar una alarma so
 notificación a través de una comunicación inalámbrica, como Bluetooth o Wi-Fi.
 
 ### 6.2. Descripción
-Este repositorio contiene un conjunto de recursos y código para construir un sistema de control ambiental utilizando un dispositivo ESP32 o RP2040 con MicroPython. Los sistemas de control ambiental son fundamentales para medir y gestionar parámetros como la temperatura, humedad, calidad del aire y otros factores para crear entornos cómodos y seguros.
+Este repositorio contiene un conjunto de recursos y código para construir un sistema de detección utilizando un dispositivo ESP32 o RP2040 con MicroPython. Los sistemas de alarma son fundamentales para mantener seguro un espacio o propiedad. Con MicroPython, puedes crear un sistema de alarma personalizado que se adapte a tus necesidades específicas.
+
+### 6.3 Requisitos
++ 1x Placa de desarrollo [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
++ 1x [Sensores de Movimiento PIR (HC-SR501 / HC-SR505 / HY3612 / AM312)](https://uelectronics.com/producto/sensores-de-movimiento-pir-hc-sr501-hc-sr505-hy3612-am312/)
++ 1x [Buzzer Zumbador 5V Pasivo](https://uelectronics.com/producto/buzzer-zumbador-5v-pasivo/)
++ Conexiones eléctricas y fuente de alimentación adecuadas.
+
+### 6.4 Contenido del Repositorio
+**Código Fuente:** En este repositorio, encontrarás el código fuente necesario para manejar el sensor de movimiento y activar una alarma sonora. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
 
 ```python
-
-import machine
+ 
+from machine import Pin
 import time
+
+# Configura el pin del sensor PIR y el buzzer
+pir_pin = Pin(12, Pin.IN)  # Reemplaza el número de pin según tu conexión
+buzzer_pin = Pin(13, Pin.OUT)  # Reemplaza el número de pin según tu conexión
+
+# Función para activar la alarma
+def activate_alarm():
+    print("¡Movimiento detectado! Activando alarma...")
+    buzzer_pin.on()
+    time.sleep(5)  # La alarma suena durante 5 segundos
+    buzzer_pin.off()
+
+print("Sistema de alarma PIR activado")
+
+while True:
+    if pir_pin.value() == 1:  # El sensor PIR detecta movimiento
+        activate_alarm()
+    
+    time.sleep(0.5)  # Espera 0.5 segundos antes de volver a verificar el sensor PIR
+
 
 
 ```
-
-### 6.3 Contenido del Repositorio
-**Código Fuente:** En este repositorio, encontrarás el código fuente necesario para monitorear y controlar parámetros ambientales. Se proporcionarán ejemplos de código que demuestran cómo utilizar sensores para medir temperatura, humedad, calidad del aire y otros factores.
-
-**Diagramas de Conexión:** Se incluirán diagramas de conexión que detallan cómo conectar sensores y actuadores a tu ESP32 o RP2040 para crear un sistema de control ambiental.
-
-**Instrucciones de Uso:** Las instrucciones detalladas te guiarán a través del proceso de configuración y ejecución del sistema de control ambiental. También se proporcionarán detalles sobre cómo personalizar la configuración y visualizar los datos recopilados.
-
 **Recursos Adicionales:** Se pueden incluir enlaces a recursos adicionales, como tutoriales sobre el uso de sensores específicos y consejos para mejorar la calidad del aire.
 
-### 6.4 Instrucciones de Uso
-1. Clona o descarga este repositorio en tu entorno de desarrollo de MicroPython.
 
-1. Sigue las instrucciones de conexión para conectar sensores de temperatura, humedad, calidad del aire y otros componentes a tu ESP32 o RP2040.
+Puedes mejorar tu habilidad complemtando el siguiente proyecto: [DualMCU_ESP32_Panel_de_control_Web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)
 
-1. Abre el código fuente en tu entorno de desarrollo MicroPython y carga el código en tu placa de desarrollo.
 
-1. Ejecuta el código en tu placa de desarrollo y comienza a recopilar datos ambientales.
 
-1. Utiliza las instrucciones proporcionadas para visualizar y analizar los datos recopilados, o para activar actuadores (como sistemas de aire acondicionado o purificadores de aire) según los valores ambientales.
-
-### 6.5 Requisitos
-+ Placa de desarrollo compatible con MicroPython (ESP32 o RP2040).
-+ Sensores de temperatura, humedad, calidad del aire, u otros sensores ambientales según tus necesidades.
-+ Actuadores si deseas realizar cambios en el ambiente en función de los datos recopilados.
-+ Conexiones eléctricas y fuente de alimentación adecuadas.
 

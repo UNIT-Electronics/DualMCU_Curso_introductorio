@@ -20,6 +20,10 @@ Este repositorio contiene recursos y ejemplos de código para implementar difere
 
 ### 11.2. Descripción
 Este repositorio proporciona recursos y código para implementar la comunicación inalámbrica entre dos o más microcontroladores utilizando tecnologías como Bluetooth, Wi-Fi o RF (radiofrecuencia). El objetivo principal es permitir la transferencia de datos, comandos y establecer una comunicación bidireccional entre los dispositivos. Este proyecto brinda flexibilidad para crear sistemas de comunicación inalámbrica personalizados.
+### 11.4 Requisitos
++ Microcontroladores DualMCU.
++ Módulos de comunicación inalámbrica, como módulos Bluetooth, Wi-Fi o RF.
++ Conexiones eléctricas y fuente de alimentación adecuadas según la tecnología utilizada.
 
 ```python
 
@@ -44,13 +48,7 @@ El repositorio incluirá código fuente, ejemplos de proyectos y documentación 
 ### 11.3 Contenido del Repositorio
 **Código Fuente:** Se proporcionarán ejemplos de código para implementar la comunicación inalámbrica utilizando diferentes tecnologías. Los usuarios podrán utilizar estos ejemplos como punto de partida para sus propios proyectos.
 
-**Diagramas de Conexión:** Se incluirán diagramas de conexión detallados que muestran cómo conectar los módulos de comunicación inalámbrica a los microcontroladores DualMCU.
-
-**Instrucciones de Uso:** Las instrucciones detalladas guiarán a los usuarios a través del proceso de configuración y ejecución de proyectos de comunicación inalámbrica.
 
 **Recursos Adicionales:** Se pueden incluir enlaces a tutoriales y documentación relevante sobre las tecnologías de comunicación inalámbrica utilizadas.
 
-### 11.4 Requisitos
-+ Microcontroladores DualMCU.
-+ Módulos de comunicación inalámbrica, como módulos Bluetooth, Wi-Fi o RF.
-+ Conexiones eléctricas y fuente de alimentación adecuadas según la tecnología utilizada.
+ 

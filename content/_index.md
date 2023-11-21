@@ -5,6 +5,8 @@ BookToC: false
 ---
 
 # Introducción a la DualMCU
+Para este desarrollo, es necesario tener instalado Micropython en ambos microcontroladores. Te recomendamos que leas la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
+
 Los tiempos recomendados para poder completar cada práctica se encuentran en la sección de [Cronograma](#cronograma).
 ### Cronograma
 LED Intermitente (1-2 días)

@@ -28,9 +28,9 @@ git clone
 ```
 
 
-Intalació de submodulos:
+Intalación de submodulos:
 ```
-cd CH559_Doc_English
+cd curso_introductorio_DualMCU
 git submodule init
 git submodule update
 ```
