@@ -5,7 +5,7 @@ weight: 8
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
 ## 8. Termostato inteligente
 ### 8.1. Objetivo
@@ -72,4 +72,3 @@ En termostato real tendría características adicionales, como la capacidad de a
 
 
 
-**Recursos Adicionales:** 

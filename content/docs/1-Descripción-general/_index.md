@@ -6,7 +6,7 @@ BookToC: false
 ---
 
 <!-- # 8-bit enhanced USB microcontroller CH559 -->
-# Introducción a la DualMCU
+# **Introducción a la DualMCU** - MicroPython 
 
 ## 1. Descripción general
 El módulo DualMCU combina el microcontrolador Raspberry Pi RP2040 junto con un chip Espressif ESP32 WROOM en un solo módulo sencillo, aprovechando al máximo los núcleos duales Arm® Cortex®-M0+ de 32 bits para crear proyectos de Internet de las cosas con conectividad Bluetooth® y Wi-Fi.

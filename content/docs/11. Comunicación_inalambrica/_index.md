@@ -1,22 +1,21 @@
     ---
-title: 11. Comunicación inalambrica
+title: 11. Comunicación inalámbrica
 type: docs
 weight: 10
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
-##    11. Comunicación inalambrica
+##    11. Comunicación inalámbrica
 ### 11.1. Objetivo
-El objetivo de este proyecto es implementar una comunicación inalámbrica efectiva entre microcontroladores DualMCU. Las metas incluyen:
+El propósito de este proyecto es implementar una comunicación inalámbrica efectiva entre microcontroladores DualMCU. Los objetivos específicos incluyen:
 
-Establecer una conexión inalámbrica confiable entre dos o más microcontroladores.
-Permitir la transferencia de datos y comandos entre los dispositivos.
-Posibilitar una comunicación bidireccional, lo que permite el control y monitoreo entre los microcontroladores.
-Ofrecer flexibilidad en la elección de la tecnología de comunicación, ya sea Bluetooth, Wi-Fi, RF u otras soluciones inalámbricas.
-Descripción
-Este repositorio contiene recursos y ejemplos de código para implementar diferentes tecnologías de comunicación inalámbrica con microcontroladores DualMCU. Las tecnologías posibles incluyen:
+1. Establecer una conexión inalámbrica confiable entre dos o más microcontroladores.
+2. Permitir la transferencia de datos y comandos entre los dispositivos.
+3. Posibilitar una comunicación bidireccional para el control y monitoreo entre los microcontroladores.
+4. Ofrecer flexibilidad en la elección de la tecnología de comunicación, ya sea Bluetooth, Wi-Fi, RF u otras soluciones inalámbricas.
+
 
 ### 11.2. Descripción
 Este repositorio proporciona recursos y código para implementar la comunicación inalámbrica entre dos o más microcontroladores utilizando tecnologías como Bluetooth, Wi-Fi o RF (radiofrecuencia). El objetivo principal es permitir la transferencia de datos, comandos y establecer una comunicación bidireccional entre los dispositivos. Este proyecto brinda flexibilidad para crear sistemas de comunicación inalámbrica personalizados.

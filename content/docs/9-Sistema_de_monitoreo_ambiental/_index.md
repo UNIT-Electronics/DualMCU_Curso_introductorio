@@ -5,7 +5,7 @@ weight: 9
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
 ## 9. Sistema de monitoreo ambiental 
 ### 9.1. Objetivo
@@ -57,7 +57,8 @@ while True:
 Este código lee la temperatura y la humedad del sensor DHT11 y la calidad del aire del sensor MQ135 cada minuto, e imprime los valores leídos.
 
 
- Ten en cuenta que este es un ejemplo muy básico y que necesitarás adaptarlo a tus necesidades específicas. Por ejemplo, podrías querer enviar los datos leídos a un servidor o a una base de datos en lugar de simplemente imprimirlos. Además, el sensor MQ135 necesita ser calibrado para proporcionar lecturas precisas de la calidad del aire.
+> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
-**Recursos Adicionales:** 
+Por ejemplo, podrías querer enviar los datos leídos a un servidor o a una base de datos en lugar de simplemente imprimirlos. Además, el sensor MQ135 necesita ser calibrado para proporcionar lecturas precisas de la calidad del aire.
+
 

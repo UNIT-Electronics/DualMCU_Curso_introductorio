@@ -5,7 +5,7 @@ weight: 3
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
 ## 3. Led intermitente
 ### 3.1. Objetivo
@@ -20,13 +20,14 @@ Este apartado incluye dos códigos separados, uno para el ESP32 y otro para el R
 ```python
 '''
 Unit Electronics 2023
-       (o_
-(o_    //\
-(/)_   V_/_ 
+          (o_
+   (o_    //\
+   (/)_   V_/_ 
+   tested code mark
+   version: 0.0.1
+   revision: 0.0.1
 
-version: 0.0.1
-revision: 0.0.1
-context: This code is a basic configuration of three RGB Led's
+   context: This code provides a basic configuration for three RGB LEDs.
 '''
 import machine
 import time

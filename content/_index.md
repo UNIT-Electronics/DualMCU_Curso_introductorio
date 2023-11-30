@@ -4,12 +4,19 @@ type: docs
 BookToC: false
 ---
 
-# Introducción a la DualMCU
-Para este desarrollo, es necesario tener instalado Micropython en ambos microcontroladores. Te recomendamos que leas la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
+# **Introducción a la DualMCU** - MicroPython 
+Es indipensable para este curso contar con Micropython en los microcontroladores es por ello que se te recomenda  la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
+
+
 
 Los tiempos recomendados para poder completar cada práctica se encuentran en la sección de [Cronograma](#cronograma).
-### Cronograma
-LED Intermitente (1-2 días)
+
+> ***NOTA:***
+>El diseño de las prácticas está orientado exclusivamente al desarrollo de software. Si bien no es imperativo contar con experiencia en el manejo de hardware, conexiones y adaptaciones, el curso aborda estos temas desde un enfoque de conocimientos generales.
+
+
+## Cronograma
+### LED Intermitente (1-2 días)
 + Aprendizaje de la plataforma y entorno de desarrollo: 0.5 día
 + Conexión del LED y programación básica: 0.5 día
 + Refinamiento y ajuste de la frecuencia de parpadeo: 1 día
@@ -37,6 +44,6 @@ LED Intermitente (1-2 días)
 ### Comunicación Inalámbrica (3-5 días)
 + Conexión de los módulos de comunicación inalámbrica: 1-2 días
 + Programación para la transmisión y recepción de datos: 2-3 días
-### Sistema de Control por Voz (4-6 días)
-+ Conexión de módulos de reconocimiento de voz y configuración: 2-3 días
-+ Programación para responder a comandos de voz: 2-3 días
+
+
+Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)

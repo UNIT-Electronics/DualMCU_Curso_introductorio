@@ -5,7 +5,7 @@ weight: 7
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
 ## 7. Control de motores DC
 ### 7.1. Objetivo
@@ -29,12 +29,11 @@ Controlar la velocidad y dirección de los motores DC de manera precisa.
 + [L298N Módulo Driver Motor A pasos](https://uelectronics.com/producto/l298n-modulo-driver-motor-a-pasos/)
 + Conexiones eléctricas y fuente de alimentación adecuadas.
 
-Contenido del Repositorio
 
-+ **Código Fuente:** El repositorio incluirá el código necesario para programar el microcontrolador y controlar los motores DC.
 
-Puedes controlar un motor de corriente continua (DC) con el controlador L298N sin usar PWM, pero esto significa que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad. 
-Aquí tienes un ejemplo de cómo hacerlo en MicroPython para el RP2040:
+Puedes controlar un motor de corriente continua (DC) con el controlador L298N sin usar PWM, pero  significa que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad.
+
+En el siguiente bloque de código presento un  ejemplo de cómo usarlo en MicroPython para el RP2040:
 
 ```python
 from machine import Pin
@@ -90,10 +89,9 @@ l298n_input2.duty(0)  # Motor en el otro sentido
 
 '''
 Unit Electronics 2023
-       (o_
-(o_    //\
-(/)_   V_/_ 
-
+           (o_
+    (o_    //\
+    (/)_   V_/_ 
 version: 0.0.1
 revision: 0.0.1
 context: This code is a basic configuration of a servo motor

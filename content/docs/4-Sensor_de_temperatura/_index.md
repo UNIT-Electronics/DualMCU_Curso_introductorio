@@ -5,7 +5,7 @@ weight: 4
 BookToC: false
 ---
 
-# Prácticas con la DualMCU
+# Prácticas con la DualMCU - MicroPython
 
 ## 4. Sensor de temperatura
 ### 4.1. Objetivo

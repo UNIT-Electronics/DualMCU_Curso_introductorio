@@ -1,5 +1,5 @@
 languageCode = "en-esp"
-title = "Curso DualMCU v1"
+title = "Curso DualMCU Micropython"
 theme = "book"
 
 # Needed for mermaid/katex shortcodes
