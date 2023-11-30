@@ -17,3 +17,6 @@ Para mayor información, consulte el [repositorio oficial de la DualMCU](https:/
 
 
 ![Block_Diagram](/docs/1-Descripción-general/images/EU0002-DUALMCU_V3.1.2.jpg "Block Diagram")
+
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

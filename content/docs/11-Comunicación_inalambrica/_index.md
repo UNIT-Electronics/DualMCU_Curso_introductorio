@@ -8,48 +8,56 @@ BookToC: false
 # Prácticas con la DualMCU - MicroPython
 
 ##    11. Comunicación inalámbrica
-### 11.1. Objetivo
-El propósito de este proyecto es implementar una comunicación inalámbrica efectiva entre microcontroladores DualMCU. Los objetivos específicos incluyen:
+### 11.1 Panel de control Web 
 
-1. Establecer una conexión inalámbrica confiable entre dos o más microcontroladores.
-2. Permitir la transferencia de datos y comandos entre los dispositivos.
-3. Posibilitar una comunicación bidireccional para el control y monitoreo entre los microcontroladores.
-4. Ofrecer flexibilidad en la elección de la tecnología de comunicación, ya sea Bluetooth, Wi-Fi, RF u otras soluciones inalámbricas.
+La DualMCU no solo se distingue por su capacidad de dos microcontroladores, sino que también aprovecha la funcionalidad del ESP32 como servidor y cliente al conectarse a una red local. Este proyecto requiere una sólida base en electrónica y programación de diversas áreas, ya que, a pesar de su aparente simplicidad, exige experiencia en ambas disciplinas.
 
+## Detalles del Proyecto:
 
-### 11.2. Descripción
-Este repositorio proporciona recursos y código para implementar la comunicación inalámbrica entre dos o más microcontroladores utilizando tecnologías como Bluetooth, Wi-Fi o RF (radiofrecuencia). El objetivo principal es permitir la transferencia de datos, comandos y establecer una comunicación bidireccional entre los dispositivos. Este proyecto brinda flexibilidad para crear sistemas de comunicación inalámbrica personalizados.
-### 11.4 Requisitos
-+ Microcontroladores DualMCU.
-+ Módulos de comunicación inalámbrica, como módulos Bluetooth, Wi-Fi o RF.
-+ Conexiones eléctricas y fuente de alimentación adecuadas según la tecnología utilizada.
+**Objetivo:** Este repositorio tiene como objetivo proporcionar recursos y ejemplos para la implementación de un sistema DualMCU que aprovecha las capacidades del ESP32 como servidor y cliente en una red local.
 
-```python
-
-import machine
-import time
-
-
-```
-
-
-
-
-
+## Literatura:
 **Bluetooth:** Permite una comunicación inalámbrica de corto alcance y es ideal para aplicaciones como control remoto, intercambio de datos entre dispositivos móviles y microcontroladores, etc.
 
 **Wi-Fi:** Proporciona conectividad a través de una red inalámbrica y es adecuado para aplicaciones que requieren comunicación a través de Internet o redes locales.
 
 **RF (Radiofrecuencia):** Utiliza módulos de radiofrecuencia para la comunicación a distancias más largas sin necesidad de una infraestructura de red.
 
-El repositorio incluirá código fuente, ejemplos de proyectos y documentación detallada para ayudar a los usuarios a implementar la comunicación inalámbrica con éxito.
+
 
 ### 11.3 Contenido del Repositorio
-**Código Fuente:** Se proporcionarán ejemplos de código para implementar la comunicación inalámbrica utilizando diferentes tecnologías. Los usuarios podrán utilizar estos ejemplos como punto de partida para sus propios proyectos.
 
 
-**Recursos Adicionales:** Se pueden incluir enlaces a tutoriales y documentación relevante sobre las tecnologías de comunicación inalámbrica utilizadas.
+Documentación técnica: Guías detalladas que explican la configuración y el funcionamiento de la DualMCU con el ESP32 en modo servidor y cliente.
 
+Ejemplos de código: Múltiples ejemplos de código fuente para ayudar a los desarrolladores a comprender y utilizar esta tecnología de manera efectiva.
+
+Recursos adicionales: Enlaces a recursos externos, libros y tutoriales que pueden ser útiles para adquirir los conocimientos necesarios en electrónica y programación requeridos para este proyecto.
+
+1. [Configuración del entorno web](./Docs/Config_environment.md)
+1. [Actualización de firmware ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython#actualizaci%C3%B3n-de-firmware)
+1. [Panel de Control Web](./Docs/Panel_control_web.md)
+
+
+
+
+
+## 11.4 Expande tu conocimiento 
+
+Para que continues aprendiendo, se te recomienda visitar el repositorio completo referente a la [DualMCU](https://github.com/UNIT-Electronics/DualMCU).
+
+![DualMCU](/docs/11-Comunicación_inalambrica/images/EU0002-DUALMCU_V3.1.2.jpg)
+
+## 11.5 DualMCU ESP32+RP2040 
+
+Para obtener más información, consulte las páginas del producto en
+
+* https://uelectronics.com/
+* [Hardware-DualMCU](https://github.com/UNIT-Electronics/DualMCU/tree/main/Hardware)
+* [Product Reference Manual.pdf](https://github.com/UNIT-Electronics/DualMCU/blob/main/DualMCU(Product%20Reference%20Manual).pdf)
+* [C++ & Micropython Examples files for the UNIT DualMCU.](https://github.com/UNIT-Electronics/DualMCU/tree/main/Examples)
+
+
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
  
-
- > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.

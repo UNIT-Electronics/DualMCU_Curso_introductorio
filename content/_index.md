@@ -47,3 +47,6 @@ Los tiempos recomendados para poder completar cada práctica se encuentran en la
 
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)
+
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

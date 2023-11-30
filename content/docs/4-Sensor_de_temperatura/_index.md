@@ -108,3 +108,5 @@ Puedea apreciar dentro de tu monitor serie, el valor de la temperatura en grados
 ![](/docs/4-Sensor_de_temperatura/images/sensor.png)
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

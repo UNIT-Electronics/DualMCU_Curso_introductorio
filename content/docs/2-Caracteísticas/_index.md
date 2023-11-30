@@ -37,3 +37,6 @@ BookToC: false
 |  SB2  | Puente de soldadura del sensor VBUS (desconectado por defecto) |   SB3  | Regulador de voltaje LDO 3.3V AP2112K |
 |  SB4  | uente de soldadura del reinicio ESP32 (desconectado por defecto)   |   SB5  |  Puente de soldadura del selector de señal SCL para ATECC608A-MAHDA-T (desconectado por defecto)|
 |  SB6  | Puente de soldadura del selector de señal SDA para ATECC608A-MAHDA-T (desconectado por defecto)|   B1  |Pads de soldadura para batería de litio (LiPo) |
+
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

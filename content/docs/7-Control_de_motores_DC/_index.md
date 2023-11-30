@@ -146,5 +146,6 @@ ld298_input4.duty(0)  # Motor 2 en sentido antihorario
 
 
 
-
+---
+⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
 
