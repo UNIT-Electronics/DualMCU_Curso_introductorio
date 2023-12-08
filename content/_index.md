@@ -4,7 +4,7 @@ type: docs
 BookToC: false
 ---
 
-# **Introducción a la DualMCU** - MicroPython 
+# Introducción a la DualMCU - MicroPython 
 Es indipensable para este curso contar con Micropython en los microcontroladores es por ello que se te recomenda  la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
 
 
