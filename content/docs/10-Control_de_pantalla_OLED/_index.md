@@ -318,7 +318,7 @@ class SSD1306_SPI(SSD1306):
 ```
 Archivo fuente original extraido del repositorio [micropython-ssd1306](https://github.com/stlehmann/micropython-ssd1306/tree/master)  de [Stefan Lehmann](https://github.com/stlehmann/)
 
-[Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
+* [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

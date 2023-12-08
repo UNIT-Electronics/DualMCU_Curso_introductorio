@@ -71,7 +71,7 @@ while True:
 En termostato real tendría características adicionales, como la capacidad de ajustar la temperatura objetivo a través de una interfaz de usuario, y podría implementar un algoritmo más sofisticado para controlar el sistema de calefacción o refrigeración de manera más eficiente.
 
 
-[Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
+* [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

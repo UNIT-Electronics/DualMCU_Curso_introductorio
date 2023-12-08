@@ -58,7 +58,7 @@ while True:
 
 Puedes mejorar tu habilidad complemtando el siguiente proyecto: [DualMCU_ESP32_Panel_de_control_Web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)
 
-[Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
+* [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
 
