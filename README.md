@@ -1,7 +1,7 @@
 # Curso de introducción a la programación con la DualMCU
 
 Proyecto princial git 
-[Curso_introductorio_DualMCU](https://github.com/Cesarbautista10/curso_introductorio_DualMCU).
+[Curso_introductorio_DualMCU](https://cesarbautista10.github.io/introduccion_a_la_DualMCU/).
 
 Documentación del curso de introducción a la programación con la [DualMCU](https://github.com/UNIT-Electronics/DualMCU).
 
