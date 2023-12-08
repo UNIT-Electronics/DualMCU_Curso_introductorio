@@ -14,7 +14,7 @@ La DualMCU no solo se distingue por su capacidad de dos microcontroladores, sino
 
 ## Detalles del Proyecto:
 
-**Objetivo:** Este repositorio tiene como objetivo proporcionar recursos y ejemplos para la implementación de un sistema DualMCU que aprovecha las capacidades del ESP32 como servidor y cliente en una red local.
+**Objetivo:** Esta práctica tiene como objetivo proporcionar recursos y ejemplos para la implementación de un sistema DualMCU que aprovecha las capacidades del ESP32 como servidor y cliente en una red local.
 
 ## Literatura:
 **Bluetooth:** Permite una comunicación inalámbrica de corto alcance y es ideal para aplicaciones como control remoto, intercambio de datos entre dispositivos móviles y microcontroladores, etc.
@@ -32,7 +32,7 @@ Documentación técnica: Guías detalladas que explican la configuración y el f
 
 Ejemplos de código: Múltiples ejemplos de código fuente para ayudar a los desarrolladores a comprender y utilizar esta tecnología de manera efectiva.
 
-Recursos adicionales: Enlaces a recursos externos, libros y tutoriales que pueden ser útiles para adquirir los conocimientos necesarios en electrónica y programación requeridos para este proyecto.
+
 [Panel de control Web GIT](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)
 1. [Configuración del entorno web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web/blob/main/Docs/Config_environment.md)
 1. [Actualización de firmware ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython#actualizaci%C3%B3n-de-firmware)
@@ -56,8 +56,7 @@ Para obtener más información, consulte las páginas del producto en
 * [Hardware-DualMCU](https://github.com/UNIT-Electronics/DualMCU/tree/main/Hardware)
 * [Product Reference Manual.pdf](https://github.com/UNIT-Electronics/DualMCU/blob/main/DualMCU(Product%20Reference%20Manual).pdf)
 * [C++ & Micropython Examples files for the UNIT DualMCU.](https://github.com/UNIT-Electronics/DualMCU/tree/main/Examples)
+* [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
-
----
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
  
