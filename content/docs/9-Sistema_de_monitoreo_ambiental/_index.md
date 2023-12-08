@@ -61,6 +61,6 @@ Este código lee la temperatura y la humedad del sensor DHT11 y la calidad del a
 
 Por ejemplo, podrías querer enviar los datos leídos a un servidor o a una base de datos en lugar de simplemente imprimirlos. Además, el sensor MQ135 necesita ser calibrado para proporcionar lecturas precisas de la calidad del aire.
 
-
+* [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
