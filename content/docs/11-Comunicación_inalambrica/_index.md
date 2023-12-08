@@ -16,7 +16,7 @@ La DualMCU no solo se distingue por su capacidad de dos microcontroladores, sino
 
 **Objetivo:** Esta práctica tiene como objetivo proporcionar recursos y ejemplos para la implementación de un sistema DualMCU que aprovecha las capacidades del ESP32 como servidor y cliente en una red local.
 
-## Literatura:
+## 11.2 Literatura:
 **Bluetooth:** Permite una comunicación inalámbrica de corto alcance y es ideal para aplicaciones como control remoto, intercambio de datos entre dispositivos móviles y microcontroladores, etc.
 
 **Wi-Fi:** Proporciona conectividad a través de una red inalámbrica y es adecuado para aplicaciones que requieren comunicación a través de Internet o redes locales.
