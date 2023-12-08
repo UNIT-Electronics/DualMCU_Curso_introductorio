@@ -33,10 +33,10 @@ Documentación técnica: Guías detalladas que explican la configuración y el f
 Ejemplos de código: Múltiples ejemplos de código fuente para ayudar a los desarrolladores a comprender y utilizar esta tecnología de manera efectiva.
 
 Recursos adicionales: Enlaces a recursos externos, libros y tutoriales que pueden ser útiles para adquirir los conocimientos necesarios en electrónica y programación requeridos para este proyecto.
-
-1. [Configuración del entorno web](./Docs/Config_environment.md)
+[Panel de control Web GIT](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)
+1. [Configuración del entorno web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web/blob/main/Docs/Config_environment.md)
 1. [Actualización de firmware ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython#actualizaci%C3%B3n-de-firmware)
-1. [Panel de Control Web](./Docs/Panel_control_web.md)
+1. [Panel de Control Web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web/blob/main/Docs/Panel_control_web.md)
 
 
 
