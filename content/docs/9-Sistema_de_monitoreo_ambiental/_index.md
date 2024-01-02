@@ -25,33 +25,46 @@ En este repositorio, encontrarás el código fuente necesario para monitorear y 
 Ejemplo de cómo podrías leer datos de un sensor de temperatura y humedad [DHT11](https://uelectronics.com/producto/modulo-ky-015-sensor-de-temperatura-y-humedad/) y un sensor de calidad del aire [MQ135](https://uelectronics.com/producto/mq-135-modulo-detector-de-calidad-de-aire/) con un ESP32 en MicroPython:
 
 ```python
-from machine import Pin
-import dht
-import time
-import adc
+'''
+Unit Electronics 2024
+       (o_
+(o_    //\
+(/)_   V_/_ 
 
-# Configura el sensor DHT11
-dht_sensor = dht.DHT11(Pin(4))
+version: 0.0.1
+revision: 0.0.1
+context: This code is a basic configuration of a ADC
+compiler: MicroPython v1.22.0 on 2023-12-27; Generic ESP32 module with ESP32
+'''
+from dht import DHT11
+from machine import Pin, ADC
+from time import sleep
 
-# Configura el sensor MQ135
-mq135_sensor = adc.ADC(Pin(36))
+sensor = DHT11 (Pin(4))
+
+# configura entrada de adc en el pin 36
+
+adc = ADC(Pin(36))
+# configura el rango de lectura de 0 a 3.3v
+adc.atten(ADC.ATTN_11DB)
+# configura el rango de lectura de 0 a 4095
+adc.width(ADC.WIDTH_12BIT)
 
 while True:
-    # Lee la temperatura y la humedad del sensor DHT11
-    dht_sensor.measure()
-    temp = dht_sensor.temperature()
-    humidity = dht_sensor.humidity()
-
-    # Lee la calidad del aire del sensor MQ135
-    air_quality = mq135_sensor.read()
-
-    # Imprime los valores leídos
+  try:
+    sleep(2)
+    valor = adc.read()
+    #imprime el valor del adc
+    print(valor)
+    sensor.measure()
+    temp = sensor.temperature()
+    hum = sensor.humidity()
+    temp_f = temp * (9/5) + 32.0
     print('Temperature: %3.1f C' %temp)
-    print('Humidity: %3.1f %%' %humidity)
-    print('Air Quality: %d' %air_quality)
-
-    # Espera un minuto antes de la próxima lectura
-    time.sleep(60)
+    print('Temperature: %3.1f F' %temp_f)
+    print('Humidity: %3.1f %%' %hum)
+  except OSError as e:
+    print('Failed to read sensor.')
 ```
 
 Este código lee la temperatura y la humedad del sensor DHT11 y la calidad del aire del sensor MQ135 cada minuto, e imprime los valores leídos.
