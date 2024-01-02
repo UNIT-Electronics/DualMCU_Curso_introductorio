@@ -50,7 +50,11 @@ context: This code is a basic configuration of a ADC
 import machine
 import time
 # configura entrada de adc en el pin 36
+<<<<<<< HEAD
 adc = machine.ADC(machine.Pin(36))
+=======
+adc = machine.ADC(machine.Pin(28))
+>>>>>>> 4cb62d250649db88237e9915e3761dcb017af087
 # configura el rango de lectura de 0 a 3.3v
 adc.atten(machine.ADC.ATTN_11DB)
 # configura el rango de lectura de 0 a 4095
