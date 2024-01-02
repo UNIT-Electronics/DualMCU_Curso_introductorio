@@ -23,7 +23,7 @@ El sensor LM35 se caracteriza por su sencillez de uso, ya que no requiere de la 
 
 + 1x [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
 + 1x [Sensor de temperatura LM35](https://uelectronics.com/producto/lm35-sensor-de-temperatura/)
-
+## Material alternativo
 
 El uso de la clase ADC ofrece una interfaz para los convertidores analógico-digital y se presenta como un punto final singular capaz de capturar y transformar un voltaje continuo en un valor digital discretizado. La clase ADC se encuentra dentro del módulo machine y se puede importar de la siguiente manera:
 
