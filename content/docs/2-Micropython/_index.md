@@ -1,5 +1,5 @@
 ---
-title: 2. Características 
+title: 2. Micropython y la DUAMCU
 type: docs
 weight: 2
 BookToC: false
@@ -7,9 +7,11 @@ BookToC: false
 
 # Características de la DualMCU
 
+Es indipensable para este curso contar con Micropython en los microcontroladores es por ello que se te recomenda  la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
+
 ## 2. Características
 
-**Vista frontal** ![Block_Diagram](/docs/2-Caracteísticas/images/Front_View_DualMCU_Topology.jpg "Block Diagram")
+**Vista frontal** ![Block_Diagram](/docs/2-Descripcion-general/images/Front_View_DualMCU_Topology.jpg "Block Diagram")
 
 | Ref. | Descripción | Ref. | Descripción
 |----------|----------|----------|-------|

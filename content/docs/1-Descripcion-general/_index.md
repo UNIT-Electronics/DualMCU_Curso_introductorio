@@ -16,7 +16,7 @@ La DualMCU ha sido diseñada como una fusión de dos microprocesadores de 32 bit
 Para mayor información, consulte el [repositorio oficial de la DualMCU](https://github.com/UNIT-Electronics/DualMCU).
 
 
-![Block_Diagram](/docs/1-Descripción-general/images/EU0002-DUALMCU_V3.1.2.jpg "Block Diagram")
+![Block_Diagram](/docs/1-Micropython/images/EU0002-DUALMCU_V3.1.2.jpg "Block Diagram")
 
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊
