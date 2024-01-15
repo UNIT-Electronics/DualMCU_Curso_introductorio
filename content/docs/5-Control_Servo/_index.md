@@ -9,23 +9,29 @@ BookToC: false
 
 ## 5. Control Servo
 ### 5.1. Objetivo
-Utiliza el microcontrolador de tu preferencia para controlar un servo motor y hacer que gire a
-ángulos específicos. Se puede hacer que el servo se mueva a través de un rango de ángulos
-determinado o que siga una secuencia predefinida.
+Utilizar la tarjeta DualMCU con el RP2040 para controlar un servo motor, logrando movimientos precisos a ángulos específicos. Esto incluye la capacidad de dirigir el servo en un rango definido o seguir una secuencia predefinida de movimientos.
 
 ### 5.2. Descripción
 
-Este apartado contiene un conjunto de recursos y código para controlar un servomotor utilizando MicroPython. Los servomotores son dispositivos ampliamente utilizados en proyectos de robótica y automatización para controlar la posición angular de un eje. Con MicroPython, puedes controlar un servomotor de manera sencilla y eficaz.
+Esta sección proporciona un conjunto de recursos y código diseñado para el control de servomotores mediante MicroPython. Los servomotores, comúnmente empleados en proyectos de robótica y automatización, permiten la gestión precisa de la posición angular de un eje. A través de MicroPython, se facilita una interfaz sencilla y eficiente para el control efectivo de servomotores, brindando a los usuarios la capacidad de incorporar este componente de manera fácil y efectiva en sus proyectos.
 
 ### 5.3 Requisitos
-+ 1x [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
-+ 1x [Servomotor compatible](https://uelectronics.com/producto/servomotor-sg90-rc-9g/)
-+ Conexiones eléctricas y fuente de alimentación adecuadas.
++ 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 
-### 5.4 Contenido del Repositorio
-**Código Fuente:** Este repositorio incluye el código fuente necesario para controlar un servomotor con MicroPython. 
++ 1x <a href="https://uelectronics.com/producto/servomotor-sg90-rc-9g/" target="_blank">Servomotor compatible</a>
 
-```python 
+
++ 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
+
+### 5.4 Diagrama de conexión
+
+<div style="text-align: center;">
+    <img src="/docs/5-Control_Servo/images/Diagrama.jpg" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
+
+### 5.5 Código Fuente:
+
+```python
 '''
 Unit Electronics 2023
           (o_
@@ -71,9 +77,7 @@ except KeyboardInterrupt:
 
 ![](/docs/5-Control_Servo/images/pwm_osc.gif)
 
-Para controlar la velocidad de un servomotor con un microcontrolador ESP32, puedes ajustar el ancho del pulso de la señal PWM que envías al servomotor. Aquí tienes un ejemplo de cómo hacerlo en MicroPython:
-
-```python
+```py
 import machine
 import utime
 
@@ -108,11 +112,28 @@ except KeyboardInterrupt:
     # Detén el PWM y limpia los recursos al interrumpir el programa con Ctrl+C
     pwm_servo.deinit()
     print("\nPWM detenido. Recursos liberados.")
-
 ```
-![](/docs/5-Control_Servo/images/pwm_osc.gif)
+
+![](/docs/5-Control_Servo/images/pwm_servo.gif)
+
+### 5.6 Resultados
+
+Los resultados obtenidos del código implementado con MicroPython en el RP2040 demuestran un eficiente control del servomotor mediante modulación por ancho de pulso (PWM). En el código, el pin GPIO 0 (ajustable según las conexiones) se configura como un canal PWM, y se establece una frecuencia de 50 Hz, comúnmente utilizada para el control de servomotores.
+
+La función set_servo_angle(angle) convierte los ángulos deseados (de 0 a 180 grados) en valores de ciclo de trabajo específicos para el servomotor. Dentro de un bucle infinito, el código logra un movimiento suave del servomotor de 0 a 180 grados y viceversa, con pausas breves entre cada posición. Es posible interrumpir el programa con Ctrl+C, deteniendo el PWM y liberando los recursos.
+
+Este código proporciona una base sólida para el control de servomotores con el RP2040 y es fácilmente adaptable a las especificaciones particulares de cualquier servomotor. La capacidad de ajustar la configuración, frecuencia y ángulos hace que este código sea versátil y aplicable a una variedad de proyectos que requieran control preciso de servomotores.
 
 El código proporcionado utiliza MicroPython en el RP2040 para controlar un servomotor mediante modulación por ancho de pulso (PWM). El pin GPIO 0 (puede ajustarse según las conexiones) se configura como un canal PWM, y se establece una frecuencia de 50 Hz para el PWM, un valor comúnmente utilizado para servomotores. La función set_servo_angle(angle) convierte los ángulos deseados (de 0 a 180 grados) en valores de ciclo de trabajo específicos para el servomotor. Luego, en un bucle infinito, el código mueve suavemente el servomotor de 0 a 180 grados y viceversa, con pausas breves entre cada posición. El programa se puede interrumpir con Ctrl+C, lo que detendrá el PWM y liberará los recursos. Este código sirve como punto de partida para controlar servomotores con el RP2040 y se puede adaptar según las especificaciones de tu servomotor.
+
+
+### 5.7 Conclusiones 
+La práctica con la tarjeta DualMCU - RP2040 y un servomotor brinda una introducción valiosa al control de dispositivos físicos mediante microcontroladores. La capacidad demostrada por el RP2040 para gestionar las señales de control del servomotor ofrece una comprensión práctica de los pines GPIO y la generación de pulsos PWM para dirigir la posición y el movimiento del motor.
+
+Esta experiencia sienta una base sólida para abordar aplicaciones más complejas en el control de dispositivos, ya sea en proyectos de robótica, automatización o sistemas embebidos. El conocimiento adquirido durante esta práctica proporciona una plataforma para explorar y desarrollar soluciones más avanzadas, permitiendo a los usuarios mejorar sus habilidades en el ámbito del control de hardware mediante microcontroladores.
+
+Para continuar mejorando en estas habilidades, se recomienda revisar y experimentar con ejemplos relacionados con PWM en el repositorio de la DualMCU, lo que permitirá una comprensión más profunda y aplicada de los conceptos aprendidos durante esta práctica.
+
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 

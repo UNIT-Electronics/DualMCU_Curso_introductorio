@@ -12,40 +12,29 @@ El objetivo principal de este repositorio es brindar un recurso completo y estru
 
 Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con las características y funcionalidades que ofrece esta placa  de desarrollo UNIT DUALMCU, lo cual permitirá sacar el máximo provecho de sus capacidades. A continuación se explican sus características de forma general. 
 
+# ELABORACIÓN DE PRÁCTICAS
+
+## Estructura de prácticas:
+
+1. **Objetivo:**
+    - Descripción breve del objetivo de la práctica.
+
+2. **Descripción:**
+    - Detalles adicionales sobre la práctica y los conceptos involucrados.
+
+3. **Requisitos:**
+    - Lista de requisitos necesarios antes de realizar la práctica.
+
+4. **Diagrama de conexión:**
+    - Representación visual del diseño de conexión para la práctica.
+
+5. **Software:**
+    - Herramientas y software necesario para llevar a cabo la práctica.
+
+6. **Conclusión:**
+    - Resumen de los resultados y conclusiones obtenidas de la práctica.
 
 
-
-
-## Desglose de practicas 
-
-### LED Intermitente
-+ Aprendizaje de la plataforma y entorno de desarrollo
-+ Conexión del LED y programación básica
-+ Refinamiento y ajuste de la frecuencia de parpadeo
-### Sensor de Temperatura 
-+ Conexión y calibración del sensor de temperatura
-+ Programación para mostrar datos en el display LCD o monitor serie
-### Control de Servo 
-+ Conexión del servo y aprendizaje del control de servo
-+ Programación para girar el servo a ángulos específicos
-### Sistema de Alarma 
-+ Conexión y calibración del sensor de movimiento
-+ Programación de la lógica de alarma y notificación
-### Control de Motores DC 
-+ Conexión de los motores y controladores
-+ Programación para el movimiento del robot y la lógica de control
-### Termóstato Inteligente 
-+ Conexión del sensor de temperatura y sistema de calefacción/refrigeración
-+ Programación de la lógica de control y ajuste de la temperatura
-### Sistema de Monitoreo Ambiental
-+ Conexión de múltiples sensores y adquisición de datos
-+ Programación para el registro y transmisión de datos
-### Control de LCD o Pantalla OLED 
-+ Conexión del display y aprendizaje de su control
-+ Programación para mostrar información deseada
-### Comunicación Inalámbrica
-+ Conexión de los módulos de comunicación inalámbrica
-+ Programación para la transmisión y recepción de datos
 
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)

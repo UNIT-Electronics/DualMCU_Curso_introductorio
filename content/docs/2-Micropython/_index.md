@@ -1,44 +1,49 @@
 ---
-title: 2. Micropython y la DUAMCU
+title: 2. Micropython y la DualMCU
 type: docs
 weight: 2
 BookToC: false
 ---
+# DualMCU ESP32: MicroPython
 
-# Características de la DualMCU
+Este repositorio contiene un ejemplo básico de cómo instalar MicroPython en la DualMCU utilizando el microcontrolador ESP32. El objetivo principal es que encuentres este repositorio útil y puedas incorporar partes de esta implementación en tus proyectos.
+>**NOTA** 
+> Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios
 
-Es indipensable para este curso contar con Micropython en los microcontroladores es por ello que se te recomenda  la documentación sobre [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython). 
 
-## 2. Características
+<div style="text-align: center;">
+    <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
 
-**Vista frontal** ![Block_Diagram](/docs/2-Descripcion-general/images/Front_View_DualMCU_Topology.jpg "Block Diagram")
+## Configuración del entorno 👋
+Antes de comenzar, se recomienda realizar la siguiente configuración:
 
-| Ref. | Descripción | Ref. | Descripción
-|----------|----------|----------|-------|
-|  U1  | Microcontrolador Raspberry Pi RP2040   |   U4  | Circuito integrado de conversión USB CH340C |
-|  U2  | Módulo Wi-Fi/Bluetooth® Espressif ESP32 WROOM    |   U5  | Circuito integrado de gestión de carga de batería MCP73831 |
-|  U3  | Circuito integrado de memoria flash de 2 MB W25Q16JVUXIQ  |   U6  | Regulador de voltaje LDO 3.3V AP2112K |
-|  L1  | LED de encendido   |   L2  | LED de carga |
-|  L3  | LED (GPIO25)   |   L4  | WS2812B LED |
-|  L5  | LED RGB 2020  |   J1  | Conector USB tipo C macho |
-|  PB1  | Botón de reinicio RP2040   |   PB2  |  Botón de arranque RP2040 |
-|  PB3  | Botón de flasheo ESP32     |   PB4  | Botón de reinicio ESP32 |
-|  JP1  |GPIO Pines de la RP2040    |   JP2  | ESP32 GPIO Header |
-|  JP3  |RP2040 (SWD) Debug Header    |   JST1  | Conector JST I2C RP2040  |
-|  JST2  | Conector JST I2C ESP32  |   JST3  | Conector JST para batería de litio (LiPo) |
-|  SW2  | Selector de comunicación USB   |   SW3  | Interruptor DIP UART |
 
-**Vista reverso**
+><a href="https://thonny.org/" target="_blank">Instalación de Thonny </a> Esto te permitirá descargar el firmware en la DualMCU ESP32.
 
-![Block_Diagram](/docs/2-Caracteísticas/images/Back_View_DualMCU_Topology.jpg "Block Diagram")
 
-| Ref. | Description | Ref. | Description
-|----------|----------|----------|-------|
-|  U7  | Soporte para el circuito integrado criptográfico ATECC608A-MAHDA-T   |   J2  |  Conector para tarjeta microSD |
-|  SW1  | Interruptor de encendido   |   SB1  | Puente de soldadura del LED de carga (desconectado por defecto) |
-|  SB2  | Puente de soldadura del sensor VBUS (desconectado por defecto) |   SB3  | Regulador de voltaje LDO 3.3V AP2112K |
-|  SB4  | uente de soldadura del reinicio ESP32 (desconectado por defecto)   |   SB5  |  Puente de soldadura del selector de señal SCL para ATECC608A-MAHDA-T (desconectado por defecto)|
-|  SB6  | Puente de soldadura del selector de señal SDA para ATECC608A-MAHDA-T (desconectado por defecto)|   B1  |Pads de soldadura para batería de litio (LiPo) |
 
----
+
+Dirígete a *"Ejecutar"* -> *"Configurar intérprete"*  para completar la configuración.
+
+ ![Interpeter](/docs/2-Micropython/images/config_intepeter.png)
+
+### Actualización de firmware 
+Para poder utilizar MicroPython, es recomendable considerar la actualización. Por lo tanto, es necesario iniciar tu DualMCU ESP32 presionando el botón de FLASH.
+
+
+1. Da clic en "Instalar o Actualizar MicroPython".
+
+1. Se abrirá una nueva ventana. 
+    - Se recomienda utilizar la siguiente configuración: 
+        - Variant: Espessif ESP32/WROOM
+        - Version: 1.20.0
+
+![instalador](/docs/2-Micropython/images/instalador.png)
+1. Presionar instalar (esperar a que termine la instalación).
+
+
+Estos pasos te permitirán actualizar y configurar MicroPython de manera adecuada en tu DualMCU ESP32.
+
+
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

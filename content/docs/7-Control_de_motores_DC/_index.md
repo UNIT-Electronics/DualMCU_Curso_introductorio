@@ -141,6 +141,11 @@ ld298_input4.duty(0)  # Motor 2 en sentido antihorario
 
 
 ```
+
+
+
+[![Demo Video]](/docs/7-Control_de_motores_DC/images/vid1.mp4)
+
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
 

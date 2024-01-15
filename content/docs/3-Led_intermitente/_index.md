@@ -9,15 +9,41 @@ BookToC: false
 
 ## 3. Led intermitente
 ### 3.1. Objetivo
-Programar el microcontrolador para que parpadee un LED a una frecuencia específica. 
-
-
+El objetivo principal de esta sección es desarrollar las habilidades necesarias para programar un efecto de parpadeo intermitente, comúnmente conocido como "Blink", a una frecuencia específica. 
 
 ### 3.2. Descripción
+La realización de un programa sencillo del parpadeo de un LED se encuentra respaldada por diversos propósitos beneficiosos. Entre ellos, se destaca la verificación del funcionamiento inicial de la DUALMCU, el entendimiento de la estructura del programa para cada microcontrolador, la familiarización con el entorno de programación y el hardware asociado a la DUALMCU. Esta práctica inicial sienta las bases esenciales para abordar con éxito las siguientes actividades.
 
-Este apartado incluye dos códigos separados, uno para el ESP32 y otro para el RP2040. Cada archivo se puede correr bajo el nombre de **blink.py** que puedes cargar en la respectiva placa para hacer que un LED parpadee. A continuación,se te proporcionará un ejemplo simple de código MicroPython para el ESP32:
+El procedimiento para llevar a cabo esta práctica implica la utilización de los dos LEDs RGB incorporados en la placa de desarrollo UNIT DUALMCU. La configuración y programación de ambos microcontroladores se realizarán de manera coordinada, permitiendo así lograr el efecto deseado de parpadeo intermitente. Esta práctica no solo proporciona una introducción práctica al manejo de LEDs y programación, sino que también establece una base sólida para futuras actividades prácticas en este entorno de desarrollo específico
 
-```python
+
+
+### 3.3 Requisitos
+
+En la presente práctica, los componentes electrónicos se encuentran íntegramente integrados en la placa de desarrollo. Se emplearán dos LEDs RGB para llevar a cabo la implementación del programa. A continuación, se detallan los materiales específicos que se utilizarán en esta actividad.
+- <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
+
+- <a href="https://uelectronics.com/producto/cable-usb-tipo-c-3a-6a/" target="_blank">Cable USB Tipo C</a>
+
+### 3.4 Diagrama de Conexión
+A continuación, se muestra el diagrama de conexión, el cual es muy sencillo: solo necesitas conectar la UNIT DUALMCU a tu laptop o computadora de escritorio mediante un cable USB Tipo C.
+
+
+![pc](/docs/3-Led_intermitente/images/pc_dual.jpg)
+
+### 3.5 Software
+Después de conectar la UNIT DUALMCU al ordenador, procede a encender el dispositivo y seleccionar el microcontrolador (MCU) deseado.
+       <div style="text-align: center;">
+       <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
+       </div>
+
+>**NOTA**
+>Encaso de que la UNIT DUALMCU no sea reconocida será necesario instalar el [controlador CH340](/docs/3-Led_intermitente/images/CH341SER.EXE). Este controlador es crucial para establecer la comunicación y la programación con el MCU ESP32 o el RP2040. 
+
+### 3.6. Código
+Usa el siguiente código para comprobar el fucionamiento de la instalación del firmware de micropython. Asegúrate de tener seleccionado el MCU ESP32 y carga el siguiente código. 
+
+```py
 '''
 Unit Electronics 2023
           (o_
@@ -26,8 +52,6 @@ Unit Electronics 2023
    tested code mark
    version: 0.0.1
    revision: 0.0.1
-
-   context: This code provides a basic configuration for three RGB LEDs.
 '''
 import machine
 import time
@@ -50,25 +74,28 @@ def loop():
 
 loop()
 ```
-El código anterior sirve para testear la configuración de [instalación de Micropython en el ESP32](https://github.com/UNIT-Electronics/DualMCU-ESP32-MicroPython), en el cual se encienden los tres leds y se apagan en un intervalo de 1 segundo. 
-Puedes modificar el código para que el led parpadee a una frecuencia diferente. Por ejemplo, si cambias el valor de la función `time.sleep(1)` a `time.sleep(0.5)`, el LED parpadeará cada 0.5 segundos.
 
-En la siguiente imagen puedes ver el resultado de este código:
 
-+ ![](/docs/3-Led_intermitente/images/blink_led2.gif)
+El código proporcionado tiene como objetivo probar la configuración de la instalación de MicroPython en el ESP32. Este código enciende los tres LEDs y luego los apaga en un intervalo de 1 segundo. Puedes personalizar el código para ajustar la frecuencia del parpadeo del LED. Por ejemplo, al modificar el valor dentro de la función 'time.sleep(1)' a 'time.sleep(0.5)', el LED parpadeará cada 0.5 segundos en lugar de 1 segundo. Se muestra a continuación el funcionamiento: 
+### 3.7 Resultados
+Se puede visualizar el funcionamiento en el siguiente gif:
 
-Y aquí tienes un ejemplo similar para el RP2040:
+![](/docs/3-Led_intermitente/images/blink_led2.gif)
 
-```python
+### 3.8 Interactua con el RP2040
+1. Asegúrate de que el selector de posición esté configurado para el RP2040 en la UNIT DUALMCU.
+
+1. Actualiza el puerto serial COM de acuerdo con la configuración de tu sistema operativo.
+
+1. Abre Thonny y copia el código proporcionado a continuación.
+
+1. Pega el código en Thonny y ejecútalo para visualizar el comportamiento del LED correspondiente al RP2040.
+```py
 '''
 Unit Electronics 2023
        (o_
 (o_    //\
 (/)_   V_/_ 
-
-version: 0.0.1
-revision: 0.0.1
-context: This code is a basic configuration of a led
 '''
 import machine
 import utime
@@ -79,9 +106,11 @@ while True:
     led.value(not led.value())  # Invierte el estado del LED (encendido/apagado)
     utime.sleep(1)  # Espera 1 segundo
 ```
-Puedes personalizar estos ejemplos según tus necesidades y cargarlos en las respectivas placas. Asegúrate de seguir las instrucciones en el repositorio para configurar correctamente el entorno de desarrollo para MicroPython en cada placa antes de cargar el código.
 
-También encontrarás un ejemplo de un código en el repositorio oficial: [blink.py](https://github.com/UNIT-Electronics/DualMCU/blob/main/Examples/Micropython%20Basics/RP2040/00.LEDs/blink.py)
+
+### 3.9 Conclusiones
+Esta práctica del Blink en la UNIT DUALMCU no solo ha sido una introducción útil para programar los MCUs RP2040, ESP32 y el manejo de la placa con MicroPython, sino que también nos ha proporcionado una base sólida para explorar y expandir nuestros conocimientos y habilidades para concretar las siguientes prácticas que se llevarán acabo como para futuros proyectos con la placa DUALMCU.
+
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
