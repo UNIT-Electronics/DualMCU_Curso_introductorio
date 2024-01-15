@@ -9,148 +9,253 @@ BookToC: false
 
 ## 7. Control de motores DC
 ### 7.1. Objetivo
-Diseñar un sistema de control de motores de corriente continua (DC) con un microcontrolador. 
-
+Se realizará un sistema de control de motores de corriente directa (DC) con ayuda de un driver L298N.
 
 ### 7.2. Descripción
-Controlar la velocidad y dirección de los motores DC de manera precisa.
+Los sistemas de control son parte integral de nuestra sociedad actual, tienen múltiples aplicaciones, desde mantener una temperatura deseada hasta mantener la estación espacial en órbita. 
 
-#### 7.2.1 Aplicación 
-- Implementar un sistema de control que permita que el robot se mueva de manera autónoma o en respuesta a comandos externos.
-- Conexión con interfaz de usuario para personalizar el comportamiento del robot.
-- Flexibilidad para la expansión y personalización del sistema de control.
+La definición para sistema de control es: conjunto de procesos que en conjunto nos ayudan a obtener una salida esperada con un desempeño deseado dada una entrada específica. 
+
+Un sistema de control de motores DC puede ser fácilmente adecuado para diferentes aplicaciones como las que se mencionan a continuación:
+
+   - Propulsión de vehículos
+   - Robots Móviles
+      - Drones
+      - Robots con ruedas u orugas
+   - Sistemas de refrigeración
+      - Control de ventiladores
+      - Extracción de humos
+   - Instalaciones de transporte
+      - Bandas de transporte
+   - Sistemas de automatización
+      - Persianas/Cortinas inteligentes
+   - Electrodomésticos y herramientas
+      - Aspiradoras
+      - Licuadoras
+      - Dremel
+      - Esmeril 
+      - Taladros
+
+Si bien, existe una mayor cantidad, se da una amplia idea de las aplicaciones que existen para los motores DC. 
+
+Esta práctica se enfocará en realizar un sistema para controlar la velocidad y dirección de motores DC de manera precisa utilizando un dispositivo ESP32 o RP2040 con MicroPython. 
+
+
+
 
 ### 7.3 Requisitos
-+ 1x Placa de desarrollo [DualMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/)
-+ Motores de corriente continua (DC).
-+ Sensores y componentes adicionales según los requisitos del robot, te recomendamos dos alternativas:
-    + [Kit Carrito 4WD Robot Educacional con Accesorios](https://uelectronics.com/producto/kit-carrito-4wd-robot-educacional-con-accesorios/)
-    + [Kit Carrito Robot Seguidor Lineas Con Accesorios](https://uelectronics.com/producto/kit-carrito-robot-seguidor-lineas-con-accesorios/)
-+ [L298N Módulo Driver Motor A pasos](https://uelectronics.com/producto/l298n-modulo-driver-motor-a-pasos/)
-+ Conexiones eléctricas y fuente de alimentación adecuadas.
+- 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
+- 2x <a href="https://uelectronics.com/producto/l298n-modulo-driver-motor-a-pasos/" target="_blank">Motores de corriente continua (DC).</a>
+- 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Driver L298N</a>
+- 1x <a href="https://uelectronics.com/producto/cable-de-alambre-estanado-24awg-25cm-100-piezas/" target="_blank">Alambre 24 AWG</a>
+- 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
+- Alimentación de 12 V
+
++ Opcionalmente te recomendamos los kits de robótica que cuentan con motores y drivers:
+- 1x <a href="https://uelectronics.com/producto/kit-carrito-4wd-robot-educacional-con-accesorios/" target="_blank">Kit Carrito 4WD Robot Educacional con Accesorio</a>
+- 1x <a href="https://uelectronics.com/producto/kit-carrito-robot-seguidor-lineas-con-accesorios/" target="_blank">Kit Carrito Robot Seguidor Lineas Con Accesorioso</a>
+
+### 7.4 Diagramas de Conexión
+Diagrama para controlar un motor
+<div style="text-align: center;">
+<img src="/docs/7-Control_de_motores_DC/images/UnMotor_bb.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
+
+Diagrama para controlar dos motores
+<div style="text-align: center;">
+<img src="/docs/7-Control_de_motores_DC/images/DosMotores_bb.png" alt="Block Diagram" title="Block Diagram" style="width: 700px;">
+</div>
 
 
 
-Puedes controlar un motor de corriente continua (DC) con el controlador L298N sin usar PWM, pero  significa que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad.
+### 7.5 Código
+Una vez realizadas las conexiones para un motor puedes controlar dicho motor de corriente continua (DC) con el controlador L298N sin usar PWM con ayuda del siguiente código. Ten en cuenta que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad.
 
-En el siguiente bloque de código presento un  ejemplo de cómo usarlo en MicroPython para el RP2040:
+> **NOTA:** Código realizado para MicroPython utilizando la DualMCU con el microprocesador RP2040. Recuerda que tu puedes intercambiar entre microcontroladores con  el selector USB.
+>       
+<div style="text-align: center;">
+    <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
+    </div>
 
 ```python
 from machine import Pin
+import time
 
 # Configura los pines para controlar el L298N
-l298n_enable = Pin(4, Pin.OUT)  # Conecta a EN del L298N
-l298n_input1 = Pin(12, Pin.OUT)  # Conecta a IN1 del L298N
-l298n_input2 = Pin(13, Pin.OUT)  # Conecta a IN2 del L298N
+l298n_enable = Pin(7, Pin.OUT)  # Conecta a EN del L298N
+l298n_input1 = Pin(14, Pin.OUT)  # Conecta a IN1 del L298N
+l298n_input2 = Pin(9, Pin.OUT)  # Conecta a IN2 del L298N
 
 # Habilita el motor
 l298n_enable.on()
-
 # Control del motor
-l298n_input1.on()  # Motor en un sentido
-l298n_input2.off()  # Motor en el otro sentido
+l298n_input1.on()
+l298n_input2.off()
+
+#Espera 5s
+time.sleep(5)
+#Deshabilita el motor
+l298n_enable.off()
+
+#Espera 1s
+time.sleep(1)
+#Habilita el motor
+l298n_enable.on()
+# Control del motor, sentido contrario
+l298n_input1.off()  
+l298n_input2.on()  
+
+#Espera 5s
+time.sleep(5)
+l298n_enable.off()
+
+
 ```
+El siguiente paso es controlar la velocidad del motor, tendrás que hacer uso de PWM para este fin. La velocidad máxima del motor la logras con el valor 65536, te recomendamos hacer pruebas con diferentes valores para encontrar las velocidades adecuadas a tus proyectos. 
+####  Comprobar los valores de PWM para diferentes velocidades, empezando con el valor mínimo y máximo.
 
-Este código hará que el motor gire en un sentido a toda velocidad. Si quieres cambiar la dirección del motor, puedes intercambiar los estados de `l298n_input1` y `l298n_input2`.
-
-El cambio si lo prefieres puedes controlar la velocidad con la que puedas moverte, el uso del PWM puedes ser una alternativa. 
 ```python
-
 from machine import Pin, PWM
+import time
 
 # Configura los pines para controlar el L298N
-l298n_enable = Pin(4, Pin.OUT)  # Conecta a EN del L298N
-l298n_input1 = PWM(Pin(12, Pin.OUT))  # Conecta a IN1 del L298N
-l298n_input2 = PWM(Pin(13, Pin.OUT))  # Conecta a IN2 del L298N
+l298n_enable = Pin(7, Pin.OUT)  # Conecta a EN del L298N
+l298n_input1 = Pin(14, Pin.OUT)  # Conecta a IN1 del L298N
+l298n_input2 = Pin(9, Pin.OUT)  # Conecta a IN2 del L298N
 
 # Habilita el motor
 l298n_enable.on()
+
+# Prepara el PWM
+pwm1 = PWM(l298n_input1)
+pwm1.freq(1000)
+
+pwm2 = PWM(l298n_input2)
+pwm2.freq(1000)
 
 # Define la velocidad del motor (ajusta el valor según sea necesario)
-motor_speed = 512
+motor_speed =  65536 #Velocidad máxima
 
-# Control del motor
-l298n_input1.duty(motor_speed)  # Motor en un sentido
-l298n_input2.duty(0)  # Motor en el otro sentido
+pwm1.duty_u16(motor_speed)
+pwm2.duty_u16(0)
 
+time.sleep(5)
+
+motor_speed =  40000
+
+pwm1.duty_u16(motor_speed)
+pwm2.duty_u16(0)
+
+time.sleep(2)
+
+motor_speed =  65536 #Velocidad máxima
+
+pwm1.duty_u16(0)
+pwm2.duty_u16(motor_speed)
+
+time.sleep(5)
+
+motor_speed =  40000
+
+pwm1.duty_u16(0)
+pwm2.duty_u16(motor_speed)
+
+time.sleep(2)
+
+l298n_enable.off()
 
 ```
 
+Tomando de base los códigos anteriores podemos controlar dos motores DC utilizando el driver L298N a la vez con ayuda del siguiente código, donde se controla la velocidad, dirección y el encendido y apagado de los motores. 
 
-
-### 5.5 Instrucciones de Uso
-
-1. Importa las clases `Pin` y `PWM` del módulo `machine`.
-2. Configura los pines GPIO para controlar el L298N. Los pines EN1 y EN2 del L298N se conectan a los pines GPIO 4 y 5 del ESP32, respectivamente. Los pines IN1, IN2, IN3 e IN4 del L298N se conectan a los pines GPIO 12, 13, 14 y 15 del ESP32, respectivamente.
-3. Habilita los motores configurando los pines EN1 y EN2 en alto.
-4. Define la velocidad de los motores ajustando el ciclo de trabajo de los pines PWM. En este caso, la velocidad del motor se establece en 512 (en una escala de 0 a 1023).
-5. Controla los motores ajustando el ciclo de trabajo de los pines IN1, IN2, IN3 e IN4. Para hacer girar un motor en sentido horario, configura el ciclo de trabajo del pin correspondiente a la velocidad del motor y el otro pin a 0. Para hacer girar un motor en sentido antihorario, haz lo contrario.
-```python
-
-'''
-Unit Electronics 2023
-           (o_
-    (o_    //\
-    (/)_   V_/_ 
-version: 0.0.1
-revision: 0.0.1
-context: This code is a basic configuration of a servo motor
-'''
+```py
 from machine import Pin, PWM
+import time
 
-# Configura los pines para controlar el LD298
-ld298_enable1 = Pin(4, Pin.OUT)  # Conecta a EN1 del LD298
-ld298_enable2 = Pin(5, Pin.OUT)  # Conecta a EN2 del LD298
-ld298_input1 = PWM(Pin(12, Pin.OUT))  # Conecta a IN1 del LD298
-ld298_input2 = PWM(Pin(13, Pin.OUT))  # Conecta a IN2 del LD298
-ld298_input3 = PWM(Pin(14, Pin.OUT))  # Conecta a IN3 del LD298
-ld298_input4 = PWM(Pin(15, Pin.OUT))  # Conecta a IN4 del LD298
+# Configura los pines para controlar el L298N
+l298n_enableA = Pin(7, Pin.OUT)  # Conecta a ENA del L298N
+l298n_input1 = Pin(14, Pin.OUT)  # Conecta a IN1 del L298N
+l298n_input2 = Pin(9, Pin.OUT)  # Conecta a IN2 del L298N
+l298n_enableB = Pin(4, Pin.OUT)  # Conecta a ENB del L298N
+l298n_input3 = Pin(8, Pin.OUT)  # Conecta a IN3 del L298N
+l298n_input4 = Pin(11, Pin.OUT)  # Conecta a IN4 del L298N
 
-# Habilita los motores
-ld298_enable1.on()
-ld298_enable2.on()
+# Habilita el motor
+l298n_enableA.on()
+l298n_enableB.on()
 
-# Define la velocidad de los motores (ajusta el valor según sea necesario)
-motor_speed = 512
+# Prepara el PWM
+pwm1 = PWM(l298n_input1)
+pwm1.freq(1000)
+pwm2 = PWM(l298n_input2)
+pwm2.freq(1000)
+pwm3 = PWM(l298n_input3)
+pwm3.freq(1000)
+pwm4 = PWM(l298n_input4)
+pwm4.freq(1000)
 
-# Control de los motores
-ld298_input1.duty(motor_speed)  # Motor 1 en sentido horario
-ld298_input2.duty(0)  # Motor 1 en sentido antihorario
-ld298_input3.duty(motor_speed)  # Motor 2 en sentido horario
-ld298_input4.duty(0)  # Motor 2 en sentido antihorario
+# Define la velocidad del motor (ajusta el valor según sea necesario)
+motor_speed =  65536 #Velocidad máxima
 
-# Para controlar otros dos motores, configura los pines y la velocidad de manera similar.
-# Por ejemplo:
-# ld298_input5 = PWM(Pin(16, Pin.OUT))  # Conecta a IN1 del segundo LD298
-# ld298_input6 = PWM(Pin(17, Pin.OUT))  # Conecta a IN2 del segundo LD298
-# ld298_input7 = PWM(Pin(18, Pin.OUT))  # Conecta a IN3 del segundo LD298
-# ld298_input8 = PWM(Pin(19, Pin.OUT))  # Conecta a IN4 del segundo LD298
+pwm1.duty_u16(motor_speed)
+pwm2.duty_u16(0)
+pwm3.duty_u16(motor_speed)
+pwm4.duty_u16(0)
 
-# Habilita los motores
-# ld298_enable3 = Pin(6, Pin.OUT)  # Conecta a EN1 del segundo LD298
-# ld298_enable4 = Pin(7, Pin.OUT)  # Conecta a EN2 del segundo LD298
-# ld298_enable3.on()
-# ld298_enable4.on()
+time.sleep(5)
 
-# Define la velocidad de los otros dos motores
-# motor_speed2 = 768
-# ld298_input5.duty(motor_speed2)
-# ld298_input6.duty(0)
-# ld298_input7.duty(motor_speed2)
-# ld298_input8.duty(0)
+motor_speed =  40000
 
+pwm1.duty_u16(motor_speed)
+pwm2.duty_u16(0)
+pwm3.duty_u16(motor_speed)
+pwm4.duty_u16(0)
+
+time.sleep(2)
+
+motor_speed =  65536 #Velocidad máxima
+
+pwm1.duty_u16(0)
+pwm2.duty_u16(motor_speed)
+pwm3.duty_u16(0)
+pwm4.duty_u16(motor_speed)
+
+time.sleep(5)
+
+motor_speed =  40000
+
+pwm1.duty_u16(0)
+pwm2.duty_u16(motor_speed)
+pwm3.duty_u16(0)
+pwm4.duty_u16(motor_speed)
+
+time.sleep(2)
+
+l298n_enableA.off()
+l298n_enableB.off(
 
 ```
-
-
-
-[![Demo Video]](/docs/7-Control_de_motores_DC/images/vid1.mp4)
-
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
+### 7.6 Resultados
+
+
+![Demo gif](/docs/7-Control_de_motores_DC/images/carrito.gif)
+
+### 7.7 Conclusiones
+Esta actividad ejemplifica de manera destacada los sistemas de control, al haber desarrollado exitosamente un sistema de control para motores DC. Este logro no solo establece los cimientos para diversos proyectos futuros, sino que también introduce varios conceptos clave de MicroPython, PWM (Modulación de Ancho de Pulso) y un mejor acercamiento a la tarjeta de desarrollo Dual MCU. 
+
+
+
+
+<h2 align="center">
+  <strong><a href="/docs/8-termostato_inteligente/"> "Práctica"</a></strong>
+</h2>
 
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
+#### Referencias
+Nise, N. (2019). Control Systems Engineering.v Editorial Wiley.
 
 ---
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

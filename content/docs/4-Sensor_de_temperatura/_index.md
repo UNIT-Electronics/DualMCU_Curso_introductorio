@@ -36,10 +36,9 @@ val = adc.read_uv()   # read an analog value in microvolts
 
 ### 4.4 Materiales
 
-+ 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
-+ 1x <a href="https://uelectronics.com/producto/lm35-sensor-de-temperatura/" target="_blank">Sensor de temperatura LM35</a>
-
-+ 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
+- 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
+- 1x <a href="https://uelectronics.com/producto/lm35-sensor-de-temperatura/" target="_blank">Sensor de temperatura LM35</a>
+- 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
 
 Para utilizar el microcontrolador ESP32 necesitarás adicionalmente a los materiales mencionados anteriormente:
 - 2x <a href="https://uelectronics.com/producto/led-5mm-difuso-rojo-amarillo-verde-azul-blanco/" target="_blank">LEDs </a>
@@ -163,6 +162,9 @@ En conclusión, la práctica ha permitido adquirir conocimientos prácticos sobr
 
 
 
+<h2 align="center">
+  <strong><a href="/docs/5-control_servo/"> "Control de Servo"</a></strong>
+</h2>
 
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.

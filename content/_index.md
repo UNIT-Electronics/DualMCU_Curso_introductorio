@@ -12,29 +12,20 @@ El objetivo principal de este repositorio es brindar un recurso completo y estru
 
 Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con las características y funcionalidades que ofrece esta placa  de desarrollo UNIT DUALMCU, lo cual permitirá sacar el máximo provecho de sus capacidades. A continuación se explican sus características de forma general. 
 
-# ELABORACIÓN DE PRÁCTICAS
 
-## Estructura de prácticas:
-
-1. **Objetivo:**
-    - Descripción breve del objetivo de la práctica.
-
-2. **Descripción:**
-    - Detalles adicionales sobre la práctica y los conceptos involucrados.
-
-3. **Requisitos:**
-    - Lista de requisitos necesarios antes de realizar la práctica.
-
-4. **Diagrama de conexión:**
-    - Representación visual del diseño de conexión para la práctica.
-
-5. **Software:**
-    - Herramientas y software necesario para llevar a cabo la práctica.
-
-6. **Conclusión:**
-    - Resumen de los resultados y conclusiones obtenidas de la práctica.
-
-
+## Contenido
+- [Introducción al curso de DualMCU con MicroPython](/)
+- [Conociendo el hardware](/docs/1-descripcion-general/)
+- [Micropython y el ESP32](http://localhost:1313/docs/2-micropython/)
+- [LED Intermitente](/docs/3-led_intermitente/)
+- [Sensor de Temperatura](/docs/4-sensor_de_temperatura/)
+- [Control de Servo](/docs/5-control_servo/) 
+- [Sistema de Alarma](/docs/6-sistema_de_alarma/)
+- [Control de Motores](/docs/7-control_de_motores_dc/)
+- [Termóstato Inteligente](/docs/8-termostato_inteligente/)
+- [Sistema de Monitoreo Ambiental](/docs/9-sistema_de_monitoreo_ambiental/)
+- [Control de LCD o Pantalla OLED](/docs/10-control_de_pantalla_oled/)
+- [Comunicación Inalámbrica](/docs/11-comunicación_inalambrica/)
 
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)

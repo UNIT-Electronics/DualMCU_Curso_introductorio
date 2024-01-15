@@ -82,6 +82,11 @@ Con este sistema fácilmente pudimos reconocer los pines I/O de la tarjeta de de
 La idea principal es que puedas identificar la dualidad de la tarjeta y posteriormente robustecer los sistemas con más demanda en la fuente de alimentación de los sensores y/o actuadores involucrados.
 
 
+<h2 align="center">
+  <strong><a href="/docs/7-control_de_motores_dc/"> "Control de motores DC"</a></strong>
+</h2>
+
+
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
 

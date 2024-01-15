@@ -22,7 +22,6 @@ El procedimiento para llevar a cabo esta práctica implica la utilización de lo
 
 En la presente práctica, los componentes electrónicos se encuentran íntegramente integrados en la placa de desarrollo. Se emplearán dos LEDs RGB para llevar a cabo la implementación del programa. A continuación, se detallan los materiales específicos que se utilizarán en esta actividad.
 - <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
-
 - <a href="https://uelectronics.com/producto/cable-usb-tipo-c-3a-6a/" target="_blank">Cable USB Tipo C</a>
 
 ### 3.4 Diagrama de Conexión
@@ -114,6 +113,11 @@ Esta práctica del Blink en la UNIT DUALMCU no solo ha sido una introducción ú
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
+
+
+<h2 align="center">
+  <strong><a href="/docs/4-sensor_de_temperatura/">"Sensor de temperatura"</a></strong>
+</h2>
 
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 ---

@@ -9,155 +9,41 @@ BookToC: false
 
 ## 10. Control de pantalla OLED
 ### 10.1. Objetivo
-El objetivo de este proyecto es programar el microcontrolador DualMCU para mostrar información en una pantalla OLED. 
+El objetivo de este proyecto es usar el microcontrolador DualMCU para mostrar información en una pantalla OLED.
+### 10.2 Descripción
+Visualizamos datos relevantes en un formato fácilmente comprensible y personalizable por medio de una pantalla OLED en 3 diferentes fases:
 
-- Mostrar la hora actual en formato de reloj digital.
-- Crear un contador regresivo con la capacidad de configurar el tiempo deseado.
-- Visualizar datos en tiempo real de sensores ambientales, como temperatura, humedad, calidad del aire, etc.
+1. Carga de la librería para el uso de la pantalla OLED SSD1306 
+2. Mostrar información tipo texto en la pantalla
+3. Crear un contador regresivo con la capacidad de configurar el tiempo deseado y visualizar datos en tiempo real de sensores ambientales, puedes utilizar los sensores de las anteriores prácticas como;temperatura, humedad, calidad del aire, etc. 
 
-
-
-### 10.2 Requisitos
-+ Microcontrolador DualMCU.
-+ Pantalla  OLED compatible.
-+ Sensores ambientales si se desea mostrar datos en tiempo real.
-+ Conexiones eléctricas y fuente de alimentación adecuadas.
+Cabe mencionar que se usará comunicación I2C como protocolo de comunicación entre la pantalla OLED y la DUAL MCU ; la propuesta es que puedas utilizar cualquier sensor para poder mostrar el dato en la misma pantalla, ya sea de los sensores de las prácticas anteriores o uno nuevo.
 
 
-### 10.3. Descripción
-Este apartado tiene como objetivo proporcionar una plataforma versátil para visualizar datos relevantes en un formato fácilmente comprensible y personalizable.
+### 10.3 Requisitos
++ 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
++ 1x <a href="https://uelectronics.com/producto/display-oled-azul-y-blanco-128x64-0-96-i2c-ssd1306/" target="_blank">  Pantalla  OLED</a>
++ 1x <a href="https://uelectronics.com/producto/protoboard-400-pts/" target="_blank"> 	Protoboard </a>
++ 1x <a href="https://uelectronics.com/producto/65-cables-para-protoboard-macho/" target="_blank">	Cables para protoboard </a>
++ 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
 
 
-```py 
-'''
-Unit Electronics 2023
-          (o_
-   (o_    //\
-   (/)_   V_/_ 
-tested code mark
-   version: 0.0.1
-   revision: 0.0.1
+### 10.4 Diagrama de conexión 
+El siguiente diagrama es para tener comunicación entre ambos módulos y poder mostrar un texto predeterminado.
 
-Código de prueba
-'''
+<div style="text-align: center;">
+<img src="/docs/10-Control_de_pantalla_OLED/images/OLED1.jpg" alt="Block Diagram" title="Block Diagram" >
+</div>
 
-import machine
-from ssd1306 import SSD1306_I2C
+Otra opción de conexión es directamente en los pines de comunicación I2C QWIIC para ESP32.
 
-i2c = machine.I2C(0,sda=machine.Pin(0), scl=machine.Pin(1))
+<div style="text-align: center;">
+<img src="/docs/10-Control_de_pantalla_OLED/images/qwiic.png" alt="Block Diagram" title="Block Diagram" style="width: 200px;">
+</div>
 
-oled = SSD1306_I2C(128, 32, i2c)
+### 10.5 Software
+Para facilitar la programación con la pantalla OLED, hemos identificado una librería específica para OLED. Te proporcionamos una alternativa práctica: copia el código y guarda el archivo como **ssd1306.py** en la DualMCU.
 
-oled.fill(1)
-oled.show()
-
-oled.fill(0)
-oled.show()
-oled.text('UNIT', 50, 10)
-oled.text('ELECTRONICS', 25, 20)
-
-oled.show()
-```
-
-En la siguente imagen puedes observar el test de prueba funcionando 
-
-![](/docs/10-Control_de_pantalla_OLED/images/oled.jpg)
-## Mejora el ejemplo 
-
-```python
-from machine import Pin, I2C
-import ssd1306
-import time
-
-# Inicializar I2C
-i2c = machine.I2C(0,sda=machine.Pin(0), scl=machine.Pin(1))
-count = 100
-segundos = 0
-minutos = 15
-horas = 10
-# Inicializar la pantalla OLED
-display = ssd1306.SSD1306_I2C(128, 64, i2c)
-
-def get_current_time():
-    global segundos
-    global minutos
-    global horas
-    # Incrementar el contador de segundos
-    segundos += 1
-
-    # Verificar si ha pasado un minuto (60 segundos)
-    if segundos == 60:
-        segundos = 0  # Reiniciar los segundos
-        minutos += 1   # Incrementar el contador de minutos
-
-        # Verificar si ha pasado una hora (60 minutos)
-        if minutos == 60:
-            minutos = 0  # Reiniciar los minutos
-            horas += 1    # Incrementar el contador de horas
-
-            # Verificar si ha pasado un día (24 horas)
-            if horas == 24:
-                horas = 0  # Reiniciar las horas
-
-    return segundos, minutos, horas
-
-
-
-
-def create_countdown():
-    global count
-    if count <= 0:
-        count =100
-        raise ValueError("El tiempo del contador debe ser mayor que cero")
-    count =count -1
-    
-    return count
-
-def read_sensor_data():
-    # Implementar la función para leer los datos de los sensores ambientales
-    pass
-
-
-# Obtener la hora actual
-# Ejemplo de uso
-
-
-while True:
-    sec,minu, hour  = get_current_time()
-
-    # Crear un contador regresivo
-    countdown = create_countdown()  # 10 segundos para el ejemplo
-
-    # Leer los datos de los sensores ambientales
-    sensor_data = read_sensor_data()
-
-    # Mostrar los datos en la pantalla OLED
-    display.fill(0)
-    display.text('Hora: '+ str(hour)+":"+str(minu)+":" + str(sec), 0, 0)
-    display.text('Contador: ' + str(countdown), 0, 10)
-    display.text('Datos del sensor: ' + str(sensor_data), 0, 20)
-    display.show()
-
-    time.sleep(1)
-
-
-```
-
-    1. Inicializar el microcontrolador DualMCU.
-    1. Inicializar la pantalla OLED.
-    1. Crear una función para obtener la hora actual del sistema y formatearla en formato de reloj digital.
-    1. Crear una función para un contador regresivo que acepte un tiempo de entrada.
-    1. Inicializar los sensores ambientales.
-    1. Crear una función para leer los datos de los sensores ambientales.
-    1. Crear una función para mostrar los datos en la pantalla OLED.
-![](/docs/10-Control_de_pantalla_OLED/images/oled_hora.gif)
-> **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
-
-Ten en cuenta que este es solo un esquema y necesitarás implementar las funciones `getCurrentTime`, `createCountdown` y `readSensorData` según tus necesidades. También necesitarás incluir las librerías adecuadas para tu microcontrolador y sensores.
-
-
-## Control para MicroPython SSD1306 OLED
-Consideramos una dificultad a la hora de buscar la Biblioteca disponible, por lo que se te proporciona una opcion funcional, copia el codigo y guarda el archivo como **ssd1306.py** en la DualMCU.
 ```py
 # MicroPython SSD1306 OLED driver, I2C and SPI interfaces
 
@@ -316,7 +202,158 @@ class SSD1306_SPI(SSD1306):
         self.cs(1)
 
 ```
-Archivo fuente original extraido del repositorio [micropython-ssd1306](https://github.com/stlehmann/micropython-ssd1306/tree/master)  de [Stefan Lehmann](https://github.com/stlehmann/)
+> **NOTA** Archivo fuente original extraido del repositorio [micropython-ssd1306](https://github.com/stlehmann/micropython-ssd1306/tree/master)  de [Stefan Lehmann](https://github.com/stlehmann/)
+
+Posteriormente guarda el anterior código en la Dual MCU bajo el nombre de **ssd1306.py**
+
+
+<div style="text-align: center;">
+    <img src="/docs/10-Control_de_pantalla_OLED/images/OLED_V2.jpg" alt="Block Diagram" title="Block Diagram" >
+    </div>
+
+
+### 10.6 Código
+
+Una vez guardado el programa anterior, procederemos a abrir un nuevo programa y realizar el siguiente código que tiene como finalidad la visualización de la leyenda **“UNIT ELECTRONCS”**
+
+```py 
+'''
+Unit Electronics 2023
+          (o_
+   (o_    //\
+   (/)_   V_/_ 
+tested code mark
+   version: 0.0.1
+   revision: 0.0.1
+
+'''
+
+import machine
+from ssd1306 import SSD1306_I2C
+
+i2c = machine.I2C(sda=machine.Pin(22), scl=machine.Pin(21)))
+
+oled = SSD1306_I2C(128, 32, i2c)
+
+oled.fill(1)
+oled.show()
+
+oled.fill(0)
+oled.show()
+oled.text('UNIT', 50, 10)
+oled.text('ELECTRONICS', 25, 20)
+
+oled.show()
+```
+
+En la siguente imagen puedes observar el test de prueba funcionando 
+
+<div style="text-align: center;">
+<img src="/docs/10-Control_de_pantalla_OLED/images/oled.jpg" alt="Block Diagram" title="Block Diagram" style="width: 500px;">
+</div>
+
+
+>**NOTA** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
+
+Ahora será tú turno de desplegar información proveniente de algún sensor, adicional te compartimos un código en donde podrás  obtener las siguientes funciones:
+1. El despliegue de la  hora actual del sistema y formatearla en formato de reloj digital.
+1. Crear una función para un contador regresivo que acepte un tiempo de entrada.
+1. Inicializar, contar con lectura los sensores ambientales (que tu propongas) y mostrar los datos en pantalla.
+
+Ten en cuenta que este es solo un esquema y necesitarás implementar las funciones `getCurrentTime`, `createCountdown` y `readSensorData` según tus necesidades. También necesitarás incluir las librerías adecuadas para tu microcontrolador y sensores.
+
+
+
+```python
+from machine import Pin, I2C
+import ssd1306
+import time
+
+# Inicializar I2C
+i2c = machine.I2C(sda=machine.Pin(22), scl=machine.Pin(21))
+count = 100
+segundos = 0
+minutos = 15
+horas = 10
+# Inicializar la pantalla OLED
+display = ssd1306.SSD1306_I2C(128, 64, i2c)
+
+def get_current_time():
+    global segundos
+    global minutos
+    global horas
+    # Incrementar el contador de segundos
+    segundos += 1
+
+    # Verificar si ha pasado un minuto (60 segundos)
+    if segundos == 60:
+        segundos = 0  # Reiniciar los segundos
+        minutos += 1   # Incrementar el contador de minutos
+
+        # Verificar si ha pasado una hora (60 minutos)
+        if minutos == 60:
+            minutos = 0  # Reiniciar los minutos
+            horas += 1    # Incrementar el contador de horas
+
+            # Verificar si ha pasado un día (24 horas)
+            if horas == 24:
+                horas = 0  # Reiniciar las horas
+
+    return segundos, minutos, horas
+
+
+
+
+def create_countdown():
+    global count
+    if count <= 0:
+        count =100
+        raise ValueError("El tiempo del contador debe ser mayor que cero")
+    count =count -1
+    
+    return count
+
+def read_sensor_data():
+    # Implementar la función para leer los datos de los sensores ambientales
+    pass
+
+
+# Obtener la hora actual
+# Ejemplo de uso
+
+
+while True:
+    sec,minu, hour  = get_current_time()
+
+    # Crear un contador regresivo
+    countdown = create_countdown()  # 10 segundos para el ejemplo
+
+    # Leer los datos de los sensores ambientales
+    sensor_data = read_sensor_data()
+
+    # Mostrar los datos en la pantalla OLED
+    display.fill(0)
+    display.text('Hora: '+ str(hour)+":"+str(minu)+":" + str(sec), 0, 0)
+    display.text('Contador: ' + str(countdown), 0, 10)
+    display.text('Datos del sensor: ' + str(sensor_data), 0, 20)
+    display.show()
+
+    time.sleep(1)
+
+
+```
+<div style="text-align: center;">
+<img src="/docs/10-Control_de_pantalla_OLED/images/oled_hora.gif" alt="Block Diagram" title="Block Diagram" >
+</div>
+
+
+### 10.7 Conclusiones
+Como se pudo observar, se logró establecer la comunicación I2C con la pantalla OLED, siendo esencial la utilización de una librería compatible con nuestro dispositivo. Es crucial considerar el propósito de emplear el sistema, ya que este puede adaptarse tanto a un sensor analógico como digital. Sin embargo, siempre es necesario tener en cuenta la requerida disponibilidad de librerías específicas de Thonny o, en su defecto, desarrollarlas según las necesidades del proyecto.
+
+
+
+
+## [**Comunicación inalámbrica**](/docs/11-comunicación_inalambrica/)
 
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
