@@ -79,7 +79,7 @@ Ahora, centrémonos en la disposición de elementos de la placa, ya que es cruci
 
 ---
 ---
-#  Continua con el curso [Micropython y el ESP32](http://localhost:1313/docs/2-micropython/)
+#  Continua con el curso [Micropython y el ESP32](/docs/2-micropython/)
 
 
 
