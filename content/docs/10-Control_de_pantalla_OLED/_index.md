@@ -8,9 +8,9 @@ BookToC: false
 # Prácticas con la DualMCU - MicroPython
 
 ## 10. Control de pantalla OLED
-### 10.1. Objetivo
+### Objetivo
 El objetivo de este proyecto es usar el microcontrolador DualMCU para mostrar información en una pantalla OLED.
-### 10.2 Descripción
+###  Descripción
 Visualizamos datos relevantes en un formato fácilmente comprensible y personalizable por medio de una pantalla OLED en 3 diferentes fases:
 
 1. Carga de la librería para el uso de la pantalla OLED SSD1306 
@@ -20,7 +20,7 @@ Visualizamos datos relevantes en un formato fácilmente comprensible y personali
 Cabe mencionar que se usará comunicación I2C como protocolo de comunicación entre la pantalla OLED y la DUAL MCU ; la propuesta es que puedas utilizar cualquier sensor para poder mostrar el dato en la misma pantalla, ya sea de los sensores de las prácticas anteriores o uno nuevo.
 
 
-### 10.3 Requisitos
+###  Requisitos
 + 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 + 1x <a href="https://uelectronics.com/producto/display-oled-azul-y-blanco-128x64-0-96-i2c-ssd1306/" target="_blank">  Pantalla  OLED</a>
 + 1x <a href="https://uelectronics.com/producto/protoboard-400-pts/" target="_blank"> 	Protoboard </a>
@@ -28,7 +28,7 @@ Cabe mencionar que se usará comunicación I2C como protocolo de comunicación e
 + 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
 
 
-### 10.4 Diagrama de conexión 
+###  Diagrama de conexión 
 El siguiente diagrama es para tener comunicación entre ambos módulos y poder mostrar un texto predeterminado.
 
 <div style="text-align: center;">
@@ -41,7 +41,7 @@ Otra opción de conexión es directamente en los pines de comunicación I2C QWII
 <img src="/docs/10-Control_de_pantalla_OLED/images/qwiic.png" alt="Block Diagram" title="Block Diagram" style="width: 200px;">
 </div>
 
-### 10.5 Software
+###  Software
 Para facilitar la programación con la pantalla OLED, hemos identificado una librería específica para OLED. Te proporcionamos una alternativa práctica: copia el código y guarda el archivo como **ssd1306.py** en la DualMCU.
 
 ```py
@@ -212,7 +212,7 @@ Posteriormente guarda el anterior código en la Dual MCU bajo el nombre de **ssd
     </div>
 
 
-### 10.6 Código
+###  Código
 
 Una vez guardado el programa anterior, procederemos a abrir un nuevo programa y realizar el siguiente código que tiene como finalidad la visualización de la leyenda **“UNIT ELECTRONCS”**
 
@@ -347,14 +347,13 @@ while True:
 </div>
 
 
-### 10.7 Conclusiones
+### Conclusiones
 Como se pudo observar, se logró establecer la comunicación I2C con la pantalla OLED, siendo esencial la utilización de una librería compatible con nuestro dispositivo. Es crucial considerar el propósito de emplear el sistema, ya que este puede adaptarse tanto a un sensor analógico como digital. Sin embargo, siempre es necesario tener en cuenta la requerida disponibilidad de librerías específicas de Thonny o, en su defecto, desarrollarlas según las necesidades del proyecto.
 
 
 
 
-## [**Comunicación inalámbrica**](/docs/11-comunicación_inalambrica/)
-
+# Continua con el curso [Comunicación Inalámbrica](/docs/11-comunicacion_inalambrica/)
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
 ---

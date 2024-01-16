@@ -8,10 +8,10 @@ BookToC: false
 # Prácticas con la DualMCU - MicroPython
 
 ## 4. Sensor de temperatura
-### 4.1. Objetivo
+###  Objetivo
 Obtener las lecturas de la temperatura actual mediante un sensor analógico LM35 y visualizar los resultados a través del monitor en serie del IDE de Thonny.
 
-### 4.2. Descripción
+###  Descripción
 
 En esta práctica, nos enfocaremos en la utilización del sensor analógico LM35 para la medición de la temperatura actual. El sensor LM35 ha sido seleccionado debido a su versatilidad y su capacidad para integrarse fácilmente con diversas placas de desarrollo. Este componente se presenta como una opción idónea para entornos educativos y proyectos de electrónica, ya que es compatible con una amplia variedad de plataformas, tales como Arduino, Raspberry Pi, Nodemcu, ESP32, así como otros dispositivos que cuenten con pines analógicos.
 
@@ -19,7 +19,7 @@ La elección del LM35 se fundamenta en su precisión en la medición de temperat
 
 Esta práctica, además de brindar la oportunidad de familiarizarse con el manejo del sensor LM35, ofrece un punto de partida para comprender cómo realizar lecturas analógicas y visualizar los resultados a través del monitor en serie del IDE de Thonny. El código de ejemplo proporcionado permitirá a los usuarios implementar esta funcionalidad tanto en dispositivos ESP32 como en RP2040, utilizando el entorno de ejecución MicroPython. Este enfoque flexible hace que la práctica sea accesible y adaptable a diversas plataformas, contribuyendo así a la versatilidad y aplicabilidad del conocimiento adquirido. 
 
-### 4.3 Descripción del ADC
+### Descripción del ADC
 El uso de la clase ADC ofrece una interfaz para los convertidores analógico-digital y se presenta como un punto final singular capaz de capturar y transformar un voltaje continuo en un valor digital discretizado. La clase ADC se encuentra dentro del módulo machine y se puede importar de la siguiente manera:
 
 ```python
@@ -34,7 +34,7 @@ val = adc.read_uv()   # read an analog value in microvolts
 
 
 
-### 4.4 Materiales
+###  Materiales
 
 - 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 - 1x <a href="https://uelectronics.com/producto/lm35-sensor-de-temperatura/" target="_blank">Sensor de temperatura LM35</a>
@@ -46,7 +46,7 @@ Para utilizar el microcontrolador ESP32 necesitarás adicionalmente a los materi
 
 
 
-### 4.5 Diagrama de conexión 
+###  Diagrama de conexión 
 >**NOTA** 
 > Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios
 
@@ -62,7 +62,7 @@ Si quieres realizar la práctica utilizando el microcontrolador ESP32 utiliza el
 
 ![](/docs/4-Sensor_de_temperatura/images/AR3578_Diagrama_ESP2.jpg)
 
-#### 4.6 Código
+####  Código
 Estos dos códigos muestran ejemplos de cómo utilizar el sensor de temperatura LM35 con dos microcontroladores diferentes: el RP2040 y el ESP32. En ambos casos, se configura la entrada analógica para leer la salida del LM35 y se realiza la lectura de la temperatura en grados Celsius.
 
 ```python
@@ -162,13 +162,10 @@ En conclusión, la práctica ha permitido adquirir conocimientos prácticos sobr
 
 
 
-<h2 align="center">
-  <strong><a href="/docs/5-control_servo/"> "Control de Servo"</a></strong>
-</h2>
-
 
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
+# Continua con el curso [Control de Servo](/docs/5-control_servo/) 
 
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 

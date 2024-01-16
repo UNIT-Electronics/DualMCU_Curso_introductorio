@@ -27,6 +27,8 @@ Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con
 - [Control de LCD o Pantalla OLED](/docs/10-control_de_pantalla_oled/)
 - [Comunicación Inalámbrica](/docs/11-comunicación_inalambrica/)
 
+# [Comenzar curso](/docs/1-descripcion-general/)
+
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)
 

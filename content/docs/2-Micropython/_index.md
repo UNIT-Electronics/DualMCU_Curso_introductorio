@@ -115,8 +115,10 @@ Este sencillo paso te introduce en el entorno MicroPython y establece las bases 
 
 
 
-<h2 align="center">
-  <strong><a href="/docs/3-led_intermitente/"> "LED Intermitente"</a></strong>
-</h2>
+
+
+
+# Continua con el curso [LED Intermitente](/docs/3-led_intermitente/)
+
 
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

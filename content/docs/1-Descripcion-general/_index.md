@@ -45,7 +45,7 @@ En el contexto de sus características técnicas, la DualMCU se presenta como un
 ---
 
 
-## 2. Características
+##  Características
 Ahora, centrémonos en la disposición de elementos de la placa, ya que es crucial comprender la ubicación de cada componente para facilitar su uso.
 
 **Vista frontal** ![Block_Diagram](/docs/1-Descripcion-general/images/Front_View_DualMCU_Topology.jpg "Block Diagram")
@@ -79,6 +79,8 @@ Ahora, centrémonos en la disposición de elementos de la placa, ya que es cruci
 
 ---
 ---
+#  Continua con el curso [Micropython y el ESP32](http://localhost:1313/docs/2-micropython/)
+
 
 
 ⌨️ con ❤️ por [UNIT-Electronics](https://github.com/UNIT-Electronics) 😊

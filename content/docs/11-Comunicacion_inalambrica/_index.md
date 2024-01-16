@@ -9,20 +9,19 @@ BookToC: false
 
 ##    11. Comunicación inalámbrica
 
-###	11.1 Objetivo
+### Objetivo
 Esta práctica proporciona recursos y ejemplos para la implementación de un sistema de servidor y cliente en una red local utilizando la tarjeta de desarrollo DualMCU aprovechando las capacidades del ESP32.
-###	11.2 Descripción
+### Descripción
 
 La DualMCU no solo se distingue por su capacidad de dos microcontroladores, sino que también aprovecha la funcionalidad del ESP32 como servidor y cliente al conectarse a una red local. Este proyecto requiere una sólida base en electrónica y programación de diversas áreas, ya que, a pesar de su aparente simplicidad, exige experiencia en ambas disciplinas.
 
-###	11.3 Requisitos
-### 10.3 Requisitos
+### Requisitos
 + 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 + 1x <a href="https://uelectronics.com/producto/potenciometro-3-pines-15mm-wh148/" target="_blank">  Potenciómetro de 10K ohm</a>
 + 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Cables Dupont : Hembra - Macho</a>
 
 
-###	11.4 Diagrama de conexión 
+### Diagrama de conexión 
 <div style="text-align: center;">
 <img src="/docs/11-Comunicacion_inalambrica/images/diagrama.jpg" alt="Block Diagram" title="Block Diagram" >
 </div>
@@ -33,8 +32,8 @@ Adicional, para la realización de la programación nuestra Dual MCU tendrá que
     <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
     </div>
 
-### 11.5 Software
-Para la ejecución de esta práctica la dividiremos en 3 etapas de configuración que tendrán que seguirse en ese orden. 
+### Software
+Para la ejecución de esta práctica la dividiremos en las siguientes etapas de configuración que tendrán que seguirse en ese orden. 
 
 <!-- [Panel de control Web GIT](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web)
 1. [Configuración del entorno web](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web/blob/main/Docs/Config_environment.md)
@@ -56,7 +55,7 @@ Como requisito inicial, necesitarás un servidor web, por lo que este proyecto s
 - Se te recomienda dejar la configuración de localización por defecto.
 - Finalmente, haz clic en "Instalar". Cuando termine la instalación, selecciona "Cerrar" o "Finalizar".
 
-### 11.6 Verifica tu Instalación
+### Verifica tu Instalación
 Para verificar que Node.js y NPM (Node Package Manager) se han instalado correctamente, abre el Command Prompt o PowerShell y escribe los siguientes comandos, luego presiona Enter:
 
 ```shell
@@ -76,7 +75,7 @@ npm -v
     <img src="/docs/11-Comunicacion_inalambrica/images/npm_versiom.png" alt="Block Diagram" title="Block Diagram">
     </div>
 
-### 11.7 Uso Básico
+### Uso Básico
 Node.js es un framework que interpreta comandos que le envías. Para probar tu instalación, puedes crear un script de prueba siguiendo estos pasos:
 
 - Abre tu editor de preferencia.
@@ -106,7 +105,7 @@ Copia y pega este [código](./App/app.js):
 
 
 
-### 11.8 Configuración del Host
+### Configuración del Host
 
 
 Descarga o clona el repositorio. Encontrarás el archivo de ejemplo en el directorio [Control_web_panel](../Control_web_panel/). Como se mencionó en la configuración del entorno, debes ejecutar el archivo app.js de la siguiente manera:
@@ -127,7 +126,7 @@ http://localhost:3000/
 
 ![Image](/docs/11-Comunicacion_inalambrica/images/web_localhost.png)
 
-### 11.9 Configuración del cliente
+### Configuración del cliente
 
 La ESP32 debe contar con el firmware de MicroPython.
 
@@ -164,7 +163,7 @@ Reemplaza tu_host por la dirección IP, por ejemplo:
 server_url = "http://192.168.0.2:3000/endpoint" 
 ```
 
-### 11.10 Código
+###  Código
 
 ```PY
 import network
@@ -317,7 +316,7 @@ time.sleep(10)
 
 ```
 
-### 11.11 Ejecutando el Programa
+###  Ejecutando el Programa
 Una vez que hayas realizado las modificaciones en el código, puedes ejecutarlo. En la consola de Thonny, verás una dirección IP a la que puedes acceder para verificar si el ESP32 está conectado:
 
 ```yaml
@@ -336,12 +335,12 @@ Finalmente, el enlace con la interfaz integrada con el envío de información po
 
 ![Interfaz](/docs/11-Comunicacion_inalambrica/images/output.gif)
 
-###	11.12 Conclusión
+###	 Conclusión
 
  La práctica realizada con DualMCU como cliente y servidor demuestra la versatilidad y potencial de este dispositivo en el ámbito de la comunicación inalámbrica. La capacidad para intercambiar datos de manera eficiente entre un cliente y un servidor abre un amplio abanico de posibilidades para aplicaciones IoT y sistemas embebidos. El aprendizaje obtenido al configurar y operar ambos roles permite comprender mejor el funcionamiento de las redes y cómo aprovechar al máximo las capacidades de la tarjeta de desarrollo DualMCU  en distintos escenarios.
 
 
-### 11.13 DualMCU ESP32+RP2040 
+###  DualMCU ESP32+RP2040 
 
 Para obtener más información, consulte las páginas del producto en
 

@@ -8,10 +8,10 @@ BookToC: false
 # Prácticas con la DualMCU - MicroPython
 
 ## 7. Control de motores DC
-### 7.1. Objetivo
+###  Objetivo
 Se realizará un sistema de control de motores de corriente directa (DC) con ayuda de un driver L298N.
 
-### 7.2. Descripción
+###  Descripción
 Los sistemas de control son parte integral de nuestra sociedad actual, tienen múltiples aplicaciones, desde mantener una temperatura deseada hasta mantener la estación espacial en órbita. 
 
 La definición para sistema de control es: conjunto de procesos que en conjunto nos ayudan a obtener una salida esperada con un desempeño deseado dada una entrada específica. 
@@ -43,7 +43,7 @@ Esta práctica se enfocará en realizar un sistema para controlar la velocidad y
 
 
 
-### 7.3 Requisitos
+### Requisitos
 - 1x <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 - 2x <a href="https://uelectronics.com/producto/l298n-modulo-driver-motor-a-pasos/" target="_blank">Motores de corriente continua (DC).</a>
 - 1x <a href="https://uelectronics.com/producto/cables-dupont-largos-20cm-hh-mh-mm/" target="_blank">Driver L298N</a>
@@ -68,7 +68,7 @@ Diagrama para controlar dos motores
 
 
 
-### 7.5 Código
+###  Código
 Una vez realizadas las conexiones para un motor puedes controlar dicho motor de corriente continua (DC) con el controlador L298N sin usar PWM con ayuda del siguiente código. Ten en cuenta que el motor solo podrá estar encendido o apagado, y no se podrá controlar su velocidad.
 
 > **NOTA:** Código realizado para MicroPython utilizando la DualMCU con el microprocesador RP2040. Recuerda que tu puedes intercambiar entre microcontroladores con  el selector USB.
@@ -237,20 +237,18 @@ l298n_enableB.off(
 ```
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
 
-### 7.6 Resultados
+###  Resultados
 
 
 ![Demo gif](/docs/7-Control_de_motores_DC/images/carrito.gif)
 
-### 7.7 Conclusiones
+###  Conclusiones
 Esta actividad ejemplifica de manera destacada los sistemas de control, al haber desarrollado exitosamente un sistema de control para motores DC. Este logro no solo establece los cimientos para diversos proyectos futuros, sino que también introduce varios conceptos clave de MicroPython, PWM (Modulación de Ancho de Pulso) y un mejor acercamiento a la tarjeta de desarrollo Dual MCU. 
 
 
 
 
-<h2 align="center">
-  <strong><a href="/docs/8-termostato_inteligente/"> "Práctica"</a></strong>
-</h2>
+# Continua con el curso [Hilos (THREADS)](/docs/8-hilos/)
 
 * [Licencia](https://www.gnu.org/licenses/gpl-3.0.html) El código que se presenta en este repositorio está licenciado bajo la Licencia Pública General de GNU (GPL) versión 3.0.
 
