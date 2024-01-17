@@ -9,25 +9,45 @@ BookToC: false
 
 ##    12. Comunicación entre microcontrolador ESP32 y RP2040
 
-## Objetivo
+### Objetivo
 Establecer una comunicación efectiva entre dos microcontroladores de la DualMCU, con el fin de unificar recursos y potenciar el poder de procesamiento en aplicaciones que requieran mayores capacidades.
 
-## Descripción 
+### Descripción 
 Esta práctica proporciona una solución para lograr una comunicación eficiente entre dos microcontroladores, específicamente el ESP32 y el RP2040. La implementación está diseñada para optimizar el rendimiento en aplicaciones que demandan mayores recursos computacionales.
 
-## Requisitos
-- Placa de desarrollo DualMCU con microcontroladores ESP32 y RP2040.
-- Entorno de desarrollo integrado (IDE) compatible con ambos microcontroladores.
-
-## Diagrama de Conexión
-
-Para esta practica necesitaras estar cambiando entre microcontroladores se te recuerda que atraves del selector puedes intercambiar entre mirocontroladores.
-
-## Código 
-El código fuente se encuentra en el directorio. A continuación, se proporciona un ejemplo básico de cómo establecer la comunicación entre los microcontroladores:
+### Requisitos
+- <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
+- <a href="https://uelectronics.com/producto/cable-usb-tipo-c-3a-6a/" target="_blank">Cable USB Tipo C</a>
 
 
-Conecta el RP2040
+### Diagrama de Conexión
+A continuación, se muestra el diagrama de conexión, el cual es muy sencillo: solo necesitas conectar la UNIT DUALMCU a tu laptop o computadora de escritorio mediante un cable USB Tipo C.
+
+
+![pc](/docs/3-Led_intermitente/images/pc_dual.jpg)
+
+
+Cambia el Interruptor DIP UART a "ON" para esta configuración.
+       <div style="text-align: center;">
+       <img src="/docs/12-Comunicacion_esp32_rp2040/images/SEL.png" alt="Block Diagram" title="Block Diagram" >
+       </div>
+
+Para esta práctica, necesitarás cambiar entre microcontroladores. Se te recuerda que a través del selector puedes intercambiar entre microcontroladores.
+ Después de conectar la UNIT DUALMCU al ordenador, procede a encender el dispositivo y seleccionar el microcontrolador (MCU) deseado.
+<div style="text-align: center;">
+<img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
+</div>
+
+### Código 
+
+
+El proceso se lleva a cabo en dos partes. La primera etapa implica la carga del código en el RP2040, lo cual debe realizarse de la siguiente manera: selecciona la placa en el COM en la parte inferior derecha.
+
+<div style="text-align: center;">
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/RP2040_COM.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
+
+Copia el siguiente código:
 
 ```py
 '''
@@ -77,10 +97,29 @@ while True:
 
 ```
 
-Cierra tu ventana y cambia de microcontrolador con el selector USB
+Guarda el código en el RP2040, seleccionando **Raspberry Pi Pico**.
 
-Conecta el ESP32
+<div style="text-align: center;">
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/SELECT_SAVE.png" alt="Block Diagram" title="Block Diagram" style="width: 200px;">
+</div>
 
+
+Te aparecerá una ventana en la que deberás escribir el nombre **main.py** y finalmente presionar ***ok***.
+<div style="text-align: center;">
+
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/SAVE_MAIN.png" alt="Block Diagram" title="Block Diagram" style="width: 500px;">
+</div>
+
+Cierra tu ventana y cambia de microcontrolador con el selector USB al **ESP32**.
+<div style="text-align: center;">
+<img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
+</div>
+Conecta el ESP32 y selecciona el microcontrolador:
+<div style="text-align: center;">
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/ESP32_COM.png" alt="Block Diagram" title="Block Diagram" style="width: 500px;">
+</div>
+
+Copia el siguiente código:
 
 ```py
 '''
@@ -139,8 +178,23 @@ while True:
     # Realiza acciones con el JSON recibido
 
 ```
+Corre el código del ESP32 debe aparecer el los datos enviados por el RP2040.
 
 
+<div style="text-align: center;">
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/shell1.png" alt="Block Diagram" title="Block Diagram" >
+</div>
+
+### Resultados
+
+Con unos breves resultados, el control de comunicación por JSON es una práctica que beneficia la comunicación en el aspecto de que los microcontroladores permiten su uso sin componentes de software externos, por lo que su implementación es práctica. Los resultados de esta comunicación permiten conocer las posibilidades de la DUALMCU. 
+<div style="text-align: center;">
+<img src="/docs/12-Comunicacion_esp32_rp2040/images/dual.gif" alt="Block Diagram" title="Block Diagram" >
+</div>
+
+### Conclusiones
+
+En conclusión, el objetivo de la práctica es lograr una comunicación efectiva entre dos microcontroladores de la DualMCU, el ESP32 y el RP2040, con el propósito de consolidar recursos y potenciar el poder de procesamiento. La implementación busca ofrecer una solución que optimice el rendimiento en aplicaciones que requieren mayores capacidades computacionales, brindando así una solución eficiente para proyectos que demandan un mayor nivel de procesamiento y coordinación entre microcontroladores.
 
 
 ###  DualMCU ESP32+RP2040 
