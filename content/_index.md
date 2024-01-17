@@ -16,7 +16,7 @@ Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con
 ## Contenido
 - [Introducción al curso de DualMCU con MicroPython](/)
 - [Conociendo el hardware](/docs/1-descripcion-general/)
-- [Micropython y el ESP32](http://localhost:1313/docs/2-micropython/)
+- [Micropython y el ESP32](/docs/2-micropython/)
 - [LED Intermitente](/docs/3-led_intermitente/)
 - [Sensor de Temperatura](/docs/4-sensor_de_temperatura/)
 - [Control de Servo](/docs/5-control_servo/) 
