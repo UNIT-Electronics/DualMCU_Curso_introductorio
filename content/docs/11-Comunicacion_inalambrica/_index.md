@@ -339,6 +339,7 @@ Finalmente, el enlace con la interfaz integrada con el envío de información po
 
  La práctica realizada con DualMCU como cliente y servidor demuestra la versatilidad y potencial de este dispositivo en el ámbito de la comunicación inalámbrica. La capacidad para intercambiar datos de manera eficiente entre un cliente y un servidor abre un amplio abanico de posibilidades para aplicaciones IoT y sistemas embebidos. El aprendizaje obtenido al configurar y operar ambos roles permite comprender mejor el funcionamiento de las redes y cómo aprovechar al máximo las capacidades de la tarjeta de desarrollo DualMCU  en distintos escenarios.
 
+# Continua con el curso [ Comunicación entre ESP32 y RP2040](/docs/12-comunicacion_esp32_rp2040/)
 
 ###  DualMCU ESP32+RP2040 
 
