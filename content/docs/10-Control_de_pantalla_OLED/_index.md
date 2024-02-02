@@ -10,6 +10,9 @@ BookToC: false
 ## 10. Control de pantalla OLED
 ### Objetivo
 El objetivo de este proyecto es usar el microcontrolador DualMCU para mostrar información en una pantalla OLED.
+
+>**NOTA** En esta práctica, se utilizará el **ESP32**.
+
 ###  Descripción
 Visualizamos datos relevantes en un formato fácilmente comprensible y personalizable por medio de una pantalla OLED en 3 diferentes fases:
 
@@ -18,6 +21,8 @@ Visualizamos datos relevantes en un formato fácilmente comprensible y personali
 3. Crear un contador regresivo con la capacidad de configurar el tiempo deseado y visualizar datos en tiempo real de sensores ambientales, puedes utilizar los sensores de las anteriores prácticas como;temperatura, humedad, calidad del aire, etc. 
 
 Cabe mencionar que se usará comunicación I2C como protocolo de comunicación entre la pantalla OLED y la DUAL MCU ; la propuesta es que puedas utilizar cualquier sensor para poder mostrar el dato en la misma pantalla, ya sea de los sensores de las prácticas anteriores o uno nuevo.
+
+
 
 
 ###  Requisitos
@@ -29,6 +34,15 @@ Cabe mencionar que se usará comunicación I2C como protocolo de comunicación e
 
 
 ###  Diagrama de conexión 
+
+
+>**NOTA** 
+> Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios, para esta práctica utilizaremos sólo el microcontrolador **ESP32** por lo que debes cambiar el interruptor a la posición “B”.”
+
+<div style="text-align: center;">
+    <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
+
 El siguiente diagrama es para tener comunicación entre ambos módulos y poder mostrar un texto predeterminado.
 
 <div style="text-align: center;">
@@ -270,7 +284,7 @@ import ssd1306
 import time
 
 # Inicializar I2C
-i2c = machine.I2C(sda=machine.Pin(22), scl=machine.Pin(21))
+i2c = machine.I2C(0, scl=machine.Pin(22), sda=machine.Pin(21))
 count = 100
 segundos = 0
 minutos = 15
@@ -346,10 +360,10 @@ while True:
 <img src="/docs/10-Control_de_pantalla_OLED/images/oled_hora.gif" alt="Block Diagram" title="Block Diagram" >
 </div>
 
-
 ### Conclusiones
-Como se pudo observar, se logró establecer la comunicación I2C con la pantalla OLED, siendo esencial la utilización de una librería compatible con nuestro dispositivo. Es crucial considerar el propósito de emplear el sistema, ya que este puede adaptarse tanto a un sensor analógico como digital. Sin embargo, siempre es necesario tener en cuenta la requerida disponibilidad de librerías específicas de Thonny o, en su defecto, desarrollarlas según las necesidades del proyecto.
+Durante el desarrollo de la práctica, se evidenció con éxito la configuración de la comunicación I2C con la pantalla OLED, destacando la importancia de emplear una librería compatible con el dispositivo utilizado. Es crucial tener en cuenta el propósito específico del sistema, ya que puede adaptarse tanto a sensores analógicos como digitales.
 
+En este contexto, se invita a replicar la misma práctica utilizando el micro RP2040, ya que se cuenta con la disponibilidad del conector QWIIC para facilitar la conexión. Se destaca la necesidad de ajustar la configuración del puerto I2C según los pines correspondientes al RP2040..
 
 
 

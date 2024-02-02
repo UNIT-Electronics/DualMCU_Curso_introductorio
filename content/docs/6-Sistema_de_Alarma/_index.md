@@ -11,8 +11,10 @@ BookToC: false
 ###  Objetivo
 Se implementará un sistema capaz de generar una alerta sonora ante la detección de movimiento.
 
+>**NOTA** En esta práctica, se utilizará el **ESP32**.
+
 ### 6.2. Descripción
-Los sistemas de alarma son fundamentales para mantener seguro un espacio o propiedad. A continuación, te compartimos recursos y código para construir un sistema de alarma personalizado que se adapte a tus necesidades específicas utilizando un dispositivo ESP32 o RP2040 con MicroPython.
+Los sistemas de alarma son fundamentales para mantener seguro un espacio o propiedad. A continuación, te compartimos recursos y código para construir un sistema de alarma personalizado que se adapte a tus necesidades específicas utilizando un dispositivo ESP32 con MicroPython.
 
 ###  Requisitos
 
@@ -23,7 +25,7 @@ Los sistemas de alarma son fundamentales para mantener seguro un espacio o propi
 
 
 ### Diagrama de conexión 
-A continuación se presenta el diagrama de conexión entre el sensor de movimiento AM312 y la tarjeta de desarrollo Dual MCU personalizado.
+A continuación se presenta el diagrama de conexión entre el sensor de movimiento AM312 y la tarjeta de desarrollo.
 
 
 ![](/docs/6-Sistema_de_Alarma/images/DIAGRAMA.jpg)
@@ -77,9 +79,8 @@ Posteriormente, se recibirá un mensaje de detección a la par que el buzzer act
 
 ###  Conclusiones
 
-Con este sistema fácilmente pudimos reconocer los pines I/O de la tarjeta de desarrollo Dual MCU, en su configuración de ESP32 . En donde obtuvimos  una señal de entrada por medio del PIR y de esta manera activar un buzzer activo.
+Con este sistema fácilmente se logra reconocer la ubicacion de las terminales de I/O de la tarjeta de desarrollo DualMCU, en su configuración con el ESP32. En donde SE obtiene una señal de entrada por medio del sensor PIR y de esta manera activar un buzzer activo.
 
-La idea principal es que puedas identificar la dualidad de la tarjeta y posteriormente robustecer los sistemas con más demanda en la fuente de alimentación de los sensores y/o actuadores involucrados.
 
 
 

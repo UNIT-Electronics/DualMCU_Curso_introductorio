@@ -12,6 +12,8 @@ BookToC: false
 ### Objetivo
 Establecer una comunicación efectiva entre dos microcontroladores de la DualMCU, con el fin de unificar recursos y potenciar el poder de procesamiento en aplicaciones que requieran mayores capacidades.
 
+ >**NOTA** En esta práctica, se emplearán ambos microcontroladores para finalizar básicos.
+
 ### Descripción 
 Esta práctica proporciona una solución para lograr una comunicación eficiente entre dos microcontroladores, específicamente el ESP32 y el RP2040. La implementación está diseñada para optimizar el rendimiento en aplicaciones que demandan mayores recursos computacionales.
 
@@ -34,8 +36,12 @@ Cambia el Interruptor DIP UART a "ON" para esta configuración.
 
 Para esta práctica, necesitarás cambiar entre microcontroladores. Se te recuerda que a través del selector puedes intercambiar entre microcontroladores.
  Después de conectar la UNIT DUALMCU al ordenador, procede a encender el dispositivo y seleccionar el microcontrolador (MCU) deseado.
+
+>**NOTA** 
+> En esta parte se utilizará el microcontrolador RP2040 por lo que debes cambiar el interruptor a la posición “A”.
+
 <div style="text-align: center;">
-<img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
+    <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
 </div>
 
 ### Código 
@@ -110,15 +116,12 @@ Te aparecerá una ventana en la que deberás escribir el nombre **main.py** y fi
 <img src="/docs/12-Comunicacion_esp32_rp2040/images/SAVE_MAIN.png" alt="Block Diagram" title="Block Diagram" style="width: 500px;">
 </div>
 
-Cierra tu ventana y cambia de microcontrolador con el selector USB al **ESP32**.
-<div style="text-align: center;">
-<img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
-</div>
-Conecta el ESP32 y selecciona el microcontrolador:
-<div style="text-align: center;">
-<img src="/docs/12-Comunicacion_esp32_rp2040/images/ESP32_COM.png" alt="Block Diagram" title="Block Diagram" style="width: 500px;">
-</div>
+>**NOTA** 
+> En esta parte se utilizará el microcontrolador ESP32 por lo que debes cambiar el interruptor a la posición “B”.
 
+<div style="text-align: center;">
+    <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
+</div>
 Copia el siguiente código:
 
 ```py
