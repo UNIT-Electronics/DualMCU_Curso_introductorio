@@ -30,7 +30,7 @@ A continuación se presenta el diagrama de conexión entre el sensor de movimien
 
 ![](/docs/6-Sistema_de_Alarma/images/DIAGRAMA.jpg)
 
-Adicional, para la realización de la programación nuestra Dual MCU tendrá que encontrarse en la configuración de uso en ESP32
+Adicional, para la realización de la programación de  DualMCU tendrá que encontrarse en la configuración de uso en ESP32
  
 <div style="text-align: center;">
 <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
