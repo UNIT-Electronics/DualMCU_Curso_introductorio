@@ -27,7 +27,7 @@ Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con
 - [Termóstato Inteligente](/docs/8-termostato_inteligente/)
 - [Sistema de Monitoreo Ambiental](/docs/9-sistema_de_monitoreo_ambiental/)
 - [Control de LCD o Pantalla OLED](/docs/10-control_de_pantalla_oled/)
-- [Comunicación Inalámbrica](/docs/11-comunicación_inalambrica/)
+- [Comunicación Inalámbrica](/docs/11-comunicacion_inalambrica/)
 - [Comunicación entre microcontrolador ESP32 y RP2040](/docs/12-comunicacion_esp32_rp2040/)
 
 
