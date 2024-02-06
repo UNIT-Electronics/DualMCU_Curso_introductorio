@@ -13,7 +13,7 @@ El módulo DualMCU representa una innovadora fusión entre el microcontrolador R
 
 En términos de potencia de procesamiento, la DualMCU integra dos microprocesadores de 32 bits: un Cortex M0+ de Raspberry RP2040 que opera a 133 MHz y un Espressif ESP32 que alcanza hasta 240 MHz. Esta combinación estratégica permite capitalizar al máximo las capacidades de ambos microcontroladores en una única tarjeta de desarrollo. Con un tamaño de PCB de 36 mm x 84 mm y utilizando tecnología de montaje superficial, la DualMCU alberga cuatro núcleos programables, destacando por sus funciones inalámbricas avanzadas y un consumo de energía excepcionalmente bajo.
 
-Para obtener información detallada y recursos adicionales, se recomienda visitar el repositorio oficial de la DualMCU.
+Para obtener información detallada y recursos adicionales, se recomienda visitar el<a href="https://github.com/UNIT-Electronics/DualMCU" target="_blank"> repositorio oficial de la DualMCU</a>.
 
 En el contexto de sus características técnicas, la DualMCU se presenta como una tarjeta de desarrollo única en su clase, amalgamando los microcontroladores ESP32 y RP2040. Esta unión posibilita la creación de proyectos de IoT con conectividad Bluetooth® y Wi-Fi, entre otras funcionalidades. Pero, ¿qué distingue a esta placa de desarrollo? A continuación, resaltamos sus principales atributos técnicos.
 
