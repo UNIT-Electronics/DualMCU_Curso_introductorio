@@ -10,8 +10,6 @@ BookToC: false
 ## 7. Control de motores DC
 ###  Objetivo
 Se realizará un sistema de control de motores de corriente directa (DC) con ayuda de un driver L298N.
->**NOTA** En esta práctica, se utilizará el **RP2040**.
-
 
 ###  Descripción
 Los sistemas de control son parte integral de nuestra sociedad actual, tienen múltiples aplicaciones, desde mantener una temperatura deseada hasta mantener la estación espacial en órbita. 

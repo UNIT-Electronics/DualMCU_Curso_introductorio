@@ -1,5 +1,5 @@
 languageCode = "en-esp"
-title = " Curso Introductorio v1 - Micropython "
+title = " Curso Introductorio con Micropython "
 theme = "book"
 
 # Needed for mermaid/katex shortcodes

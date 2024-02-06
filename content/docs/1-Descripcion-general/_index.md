@@ -13,7 +13,7 @@ El módulo DualMCU representa una innovadora fusión entre el microcontrolador R
 
 En términos de potencia de procesamiento, la DualMCU integra dos microprocesadores de 32 bits: un Cortex M0+ de Raspberry RP2040 que opera a 133 MHz y un Espressif ESP32 que alcanza hasta 240 MHz. Esta combinación estratégica permite capitalizar al máximo las capacidades de ambos microcontroladores en una única tarjeta de desarrollo. Con un tamaño de PCB de 36 mm x 84 mm y utilizando tecnología de montaje superficial, la DualMCU alberga cuatro núcleos programables, destacando por sus funciones inalámbricas avanzadas y un consumo de energía excepcionalmente bajo.
 
-Para obtener información detallada y recursos adicionales, se recomienda visitar el repositorio oficial de la [DualMCU](https://github.com/UNIT-Electronics/DualMCU)
+Para obtener información detallada y recursos adicionales, se recomienda visitar el repositorio oficial de la DualMCU.
 
 En el contexto de sus características técnicas, la DualMCU se presenta como una tarjeta de desarrollo única en su clase, amalgamando los microcontroladores ESP32 y RP2040. Esta unión posibilita la creación de proyectos de IoT con conectividad Bluetooth® y Wi-Fi, entre otras funcionalidades. Pero, ¿qué distingue a esta placa de desarrollo? A continuación, resaltamos sus principales atributos técnicos.
 
@@ -30,13 +30,12 @@ En el contexto de sus características técnicas, la DualMCU se presenta como un
             <strong>Peso:</strong> 22.57g<br>
             <strong>MCUs:</strong> RP2040 Dual Core + ESP32 WROOM-32E<br>
             <strong>USB a UART:</strong> CH340C<br>
-            <strong>Conectores:</strong>  Conectores: 2 x I2C JST-SH Pitch 1mm, 1 MicroSD, USB Tipo C y JST-SH 2p Pitch 2mm para la conexión de batería lipo 3.7V.<br>
+            <strong>Conectores:</strong> 2 x I2C JST-SH Pitch 1mm, 1 MicroSD, USB Tipo C y JST-SH 2p Pitch 2mm: Conexión para batería.<br>
             <strong>Incluye:</strong> Tira header macho doble 2.54mm (2×3, 2×20 pines)<br>
             <strong>Memoria:</strong> W25Q16JVUXIQ 2MB NOR Flash, 532MHz Quad SPI y 66MB/S Tasa de transferencia continua de datos.<br>
             <strong>Alimentación:</strong> 3.3V LDO 600mA, 3.3V Power/Enable pin, VUSB Output/VIN: 3.2 a 6V DC, Interfaz para cargar baterías de 200mA con led incorporado.<br>
             <strong>SWITCH:</strong> Power Switch, Selector de comunicación USB, DIP Switch para comunicación UART, Botón de RESET y Cargador de arranque para reinicios rápidos de RP2040 y Boton de RESET y FLASH/BOOT.<br>
-            <strong>LEDS:</strong> La tarjeta de desarrollo incluye LEDs RGB WS2812B NeoPixel conectados al RP2040, un LED RGB con cátodo común conectado al ESP32 y un led en el GPIO25 del RP2040.
-            <br>
+            <strong>LED´S:</strong> RGB WS2812B NoePixel: Conexión a RP2040 GPIO, RGB Cátodo común: Conexión a ESP32 GPIO y Builtin Led: Led de propósito general conectado al GPIO25 RP2040.<br>
             <strong>MICROSD CARD:</strong> Conexión a ESP32 y Interfaz de comunicación: VSPI.
         </td>
     </tr>
@@ -75,7 +74,7 @@ Ahora, centrémonos en la disposición de elementos de la placa, ya que es cruci
 |  U7  | Soporte para el circuito integrado criptográfico ATECC608A-MAHDA-T   |   J2  |  Conector para tarjeta microSD |
 |  SW1  | Interruptor de encendido   |   SB1  | Puente de soldadura del LED de carga (desconectado por defecto) |
 |  SB2  | Puente de soldadura del sensor VBUS (desconectado por defecto) |   SB3  | Regulador de voltaje LDO 3.3V AP2112K |
-|  SB4  | Puente de soldadura del reinicio ESP32 (desconectado por defecto)   |   SB5  |  Puente de soldadura del selector de señal SCL para ATECC608A-MAHDA-T (desconectado por defecto)|
+|  SB4  | uente de soldadura del reinicio ESP32 (desconectado por defecto)   |   SB5  |  Puente de soldadura del selector de señal SCL para ATECC608A-MAHDA-T (desconectado por defecto)|
 |  SB6  | Puente de soldadura del selector de señal SDA para ATECC608A-MAHDA-T (desconectado por defecto)|   B1  |Pads de soldadura para batería de litio (LiPo) |
 
 ---

@@ -11,7 +11,6 @@ BookToC: false
 ###  Objetivo
 Utilizar la tarjeta DualMCU con el RP2040 para controlar un servo motor, logrando movimientos precisos a ángulos específicos. Esto incluye la capacidad de dirigir el servo en un rango definido o seguir una secuencia predefinida de movimientos.
 
->**NOTA** En esta práctica, se utilizará el **RP2040**.
 ###  Descripción
 
 Esta sección proporciona un conjunto de recursos y código diseñado para el control de servomotores mediante MicroPython. Los servomotores, comúnmente empleados en proyectos de robótica y automatización, permiten la gestión precisa de la posición angular de un eje. A través de MicroPython, se facilita una interfaz sencilla y eficiente para el control efectivo de servomotores, brindando a los usuarios la capacidad de incorporar este componente de manera fácil y efectiva en sus proyectos.
@@ -30,7 +29,7 @@ A continuación, se presenta el diagrama de conexión, el cual es bastante senci
 </div>
 
 >**NOTA** 
-> Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios, para esta práctica utilizaremos sólo el microcontrolador RP2040 por lo que debes cambiar el interruptor a la posición “A”.”
+> Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios
 
 <div style="text-align: center;">
     <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">

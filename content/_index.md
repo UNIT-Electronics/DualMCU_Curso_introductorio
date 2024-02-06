@@ -1,18 +1,29 @@
 ---
-title: Curso de introducción a la DualMCU
+title: Introduction to DualMCU
 type: docs
 BookToC: false
 ---
 
-# Introducción a la DualMCU - MicroPython 
+# DualMCU Introduction - MicroPython 
 
 Bienvenido al repositorio de prácticas para la placa de desarrollo [UNIT DUALMCU](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/), una plataforma poderosa que combina las capacidades del ESP32 y el RP2040. Este repositorio está diseñado para proporcionar una guía paso a paso en la exploración y desarrollo de aplicaciones con esta placa, abordando desde los conceptos básicos hasta proyectos intermedios.
+
 
 El objetivo principal de este repositorio es brindar un recurso completo y estructurado para aquellos que deseen aprender a utilizar las capacidades de la DUALMCU para una amplia gama de aplicaciones prácticas. Cada práctica se enfoca en aspectos específicos como la programación de LEDs, sensores, control de actuadores, sistemas de monitoreo y comunicación inalámbrica, entre otros.
 
 Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con las características y funcionalidades que ofrece esta placa  de desarrollo UNIT DUALMCU, lo cual permitirá sacar el máximo provecho de sus capacidades. A continuación se explican sus características de forma general. 
 
 
+
+
+-------------------------------------------
+Welcome to the practice repository for the [UNIT DUALMCU development board](https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/), a powerful platform that combines the capabilities of ESP32 and RP2040 microcontrollers. This repository is designed to provide a step-by-step guide for exploring and developing applications with this board, covering basic concepts to intermediate projects.
+
+The main objective of this repository is to provide a comprehensive and structured resource for those who wish to learn how to harness the capabilities of DUALMCU for a wide range of practical applications. Each practice focuses on specific aspects such as programming LEDs, sensors, actuator control, monitoring systems, and wireless communication, among others.
+
+Before diving into the proposed practices, it is crucial to familiarize yourself with the features and functionalities offered by the UNIT DUALMCU development board. This will enable you to make the most of its capabilities. The following section provides a general overview of its characteristics.
+
+-------------------------------------------
 ## Contenido
 - [Introducción al curso de DualMCU con MicroPython](/)
 - [Conociendo el hardware](/docs/1-descripcion-general/)
@@ -26,10 +37,10 @@ Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con
 - [Sistema de Monitoreo Ambiental](/docs/9-sistema_de_monitoreo_ambiental/)
 - [Control de LCD o Pantalla OLED](/docs/10-control_de_pantalla_oled/)
 - [Comunicación Inalámbrica](/docs/11-comunicación_inalambrica/)
-- [Comunicación entre microcontrolador ESP32 y RP2040](/docs/12-comunicacion_esp32_rp2040/)
+- [Comunicación entre microcontrolador ESP32 y RP2040](/docs/12-comunicación_inalambrica/)
 
 
-# [Comenzar curso](/docs/1-descripcion-general/)
+# [Start Course](/docs/1-descripcion-general/)
 
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)

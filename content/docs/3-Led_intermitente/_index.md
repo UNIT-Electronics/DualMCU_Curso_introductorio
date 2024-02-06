@@ -11,8 +11,6 @@ BookToC: false
 ###  Objetivo
 El objetivo principal de esta sección es desarrollar las habilidades necesarias para programar un efecto de parpadeo intermitente, comúnmente conocido como "Blink", a una frecuencia específica. 
 
- >**NOTA** En esta práctica, se emplearán ambos microcontroladores para fortalecer los fundamentos básicos.
-
 ###  Descripción
 La realización de un programa sencillo del parpadeo de un LED se encuentra respaldada por diversos propósitos beneficiosos. Entre ellos, se destaca la verificación del funcionamiento inicial de la DUALMCU, el entendimiento de la estructura del programa para cada microcontrolador, la familiarización con el entorno de programación y el hardware asociado a la DUALMCU. Esta práctica inicial sienta las bases esenciales para abordar con éxito las siguientes actividades.
 
@@ -22,7 +20,7 @@ El procedimiento para llevar a cabo esta práctica implica la utilización de lo
 
 ### Requisitos
 
-En la presente práctica, los componentes electrónicos necesarios ya están integrados en su totalidad en la placa de desarrollo. Para llevar a cabo la implementación del programa, se emplearán dos LEDs RGB. A continuación, se detallan los materiales específicos que se utilizarán en esta actividad
+En la presente práctica, los componentes electrónicos se encuentran íntegramente integrados en la placa de desarrollo. Se emplearán dos LEDs RGB para llevar a cabo la implementación del programa. A continuación, se detallan los materiales específicos que se utilizarán en esta actividad.
 - <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 - <a href="https://uelectronics.com/producto/cable-usb-tipo-c-3a-6a/" target="_blank">Cable USB Tipo C</a>
 
@@ -39,7 +37,7 @@ Después de conectar la UNIT DUALMCU al ordenador, procede a encender el disposi
        </div>
 
 >**NOTA**
->Encaso de que la UNIT DUALMCU no sea reconocida será necesario instalar el [controlador CH340](/docs/3-Led_intermitente/images/CH341SER.EXE). Este controlador es crucial para establecer la comunicación y la programación con el MCU ESP32. 
+>Encaso de que la UNIT DUALMCU no sea reconocida será necesario instalar el [controlador CH340](/docs/3-Led_intermitente/images/CH341SER.EXE). Este controlador es crucial para establecer la comunicación y la programación con el MCU ESP32 o el RP2040. 
 
 ### Código
 Usa el siguiente código para comprobar el fucionamiento de la instalación del firmware de micropython. Asegúrate de tener seleccionado el MCU ESP32 y carga el siguiente código. 

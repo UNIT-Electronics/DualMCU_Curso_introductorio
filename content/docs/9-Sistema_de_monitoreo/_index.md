@@ -10,8 +10,6 @@ BookToC: false
 ## 9. Sistema de monitoreo ambiental 
 ###  Objetivo
 Utilizar los sensores DHT11 y MQ135 para medir parámetros ambientales tales como Humedad, temperatura y calidad de aire cada minuto y visualizar las lecturas en el Monitor Serial de Thonny.
->**NOTA** En esta práctica, se utilizará el **ESP32**.
-
 
 ###  Descripción
 Los sistemas de control ambiental son fundamentales para medir y gestionar parámetros como la temperatura, humedad, calidad del aire y otros factores para crear entornos cómodos y seguros. A continuación te compartimos recursos y código para construir un sistema de control ambiental utilizando los sensores DHT11 y MQ135 así como la configuración ESP32 con MicroPython.

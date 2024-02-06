@@ -11,9 +11,6 @@ BookToC: false
 ###  Objetivo
 Obtener las lecturas de la temperatura actual mediante un sensor analógico LM35 y visualizar los resultados a través del monitor en serie del IDE de Thonny.
 
->**NOTA** En esta práctica, se utilizará el **RP2040**.
-
-
 ###  Descripción
 
 En esta práctica, nos enfocaremos en la utilización del sensor analógico LM35 para la medición de la temperatura actual. El sensor LM35 ha sido seleccionado debido a su versatilidad y su capacidad para integrarse fácilmente con diversas placas de desarrollo. Este componente se presenta como una opción idónea para entornos educativos y proyectos de electrónica, ya que es compatible con una amplia variedad de plataformas, tales como Arduino, Raspberry Pi, Nodemcu, ESP32, así como otros dispositivos que cuenten con pines analógicos.
@@ -100,7 +97,14 @@ while True:
 
 ```
 
+
+
 El código para el RP2040 utiliza MicroPython y Thonny para imprimir las lecturas de temperatura en el monitor serial. Se configura el pin de entrada analógica, se lee el valor del LM35 en milivoltios, se convierte a grados Celsius y se imprime en el formato deseado. El bucle infinito asegura que las lecturas se realicen continuamente con un intervalo de espera de un segundo.
+
+
+
+
+
 
 
 ```python

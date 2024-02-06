@@ -12,21 +12,11 @@ BookToC: false
  
 Comprender el funcionamiento de hilos en el microcontrolador ESP32.
 
->**NOTA** En esta práctica, se utilizará el **ESP32**.
-
-
 ###	 Descripción
 
 Los hilos, también conocidos como threads en inglés, son una forma poderosa de realizar múltiples tareas de manera concurrente en un programa de software. En MicroPython, los hilos nos permiten dividir la ejecución de nuestro programa en múltiples secuencias de instrucciones, lo que puede mejorar significativamente la eficiencia y la capacidad de respuesta de nuestras aplicaciones en plataformas como DualMCU ESP32.
 
 El código proporcionado implementa dos hilos en MicroPython para el ESP32. Un hilo incrementa una variable compartida, mientras que el otro hilo imprime el valor compartido. Esto sirve como un ejemplo básico de cómo trabajar con hilos en MicroPython.
-
->**NOTA** 
-> Recuerda que al trabajar con la DualMCU puedes intercambiar entre micrcontroladores mediante el interruptor de cambios, para esta práctica utilizaremos sólo el microcontrolador **ESP32** por lo que debes cambiar el interruptor a la posición “B”.”
-
-<div style="text-align: center;">
-    <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
-</div>
 
 ###	 Requisitos
 

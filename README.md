@@ -1,4 +1,4 @@
-# Curso de introducción a la programación  DualMCU
+# Introdution programming to Micropython (DualMCU)
 
 Proyecto princial `git`
 [Curso_introductorio_DualMCU](https://unit-electronics.github.io/DualMCU_Curso_introductorio/).
