@@ -31,7 +31,7 @@ Antes de sumergirnos en las prácticas propuestas, es crucial familiarizarse con
 - [Comunicación entre microcontrolador ESP32 y RP2040](/docs/12-comunicación_inalambrica/)
 
 
-# [Start Course](/docs/1-descripcion-general/)
+# [Comenzar curso](/docs/1-descripcion-general/)
 
 
 Hacemos uso de la [Documentación oficial MicroPython](https://docs.micropython.org/en/latest/index.html)
