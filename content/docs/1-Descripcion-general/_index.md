@@ -35,7 +35,7 @@ En el contexto de sus características técnicas, la DualMCU se presenta como un
             <strong>Memoria:</strong> W25Q16JVUXIQ 2MB NOR Flash, 532MHz Quad SPI y 66MB/S Tasa de transferencia continua de datos.<br>
             <strong>Alimentación:</strong> 3.3V LDO 600mA, 3.3V Power/Enable pin, VUSB Output/VIN: 3.2 a 6V DC, Interfaz para cargar baterías de 200mA con led incorporado.<br>
             <strong>SWITCH:</strong> Power Switch, Selector de comunicación USB, DIP Switch para comunicación UART, Botón de RESET y Cargador de arranque para reinicios rápidos de RP2040 y Boton de RESET y FLASH/BOOT.<br>
-            <strong>LED´S:</strong> RGB WS2812B NoePixel: Conexión a RP2040 GPIO, RGB Cátodo común: Conexión a ESP32 GPIO y Builtin Led: Led de propósito general conectado al GPIO25 RP2040.<br>
+            <strong>LED´S:</strong> La tarjeta de desarrollo incluye LEDs RGB WS2812B NeoPixel conectados al RP2040, un LED RGB con cátodo común conectado al ESP32 y un led en el GPIO25 del RP2040.<br>
             <strong>MICROSD CARD:</strong> Conexión a ESP32 y Interfaz de comunicación: VSPI.
         </td>
     </tr>
