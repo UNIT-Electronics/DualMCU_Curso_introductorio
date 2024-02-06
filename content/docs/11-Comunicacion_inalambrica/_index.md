@@ -11,6 +11,9 @@ BookToC: false
 
 ### Objetivo
 Esta práctica proporciona recursos y ejemplos para la implementación de un sistema de servidor y cliente en una red local utilizando la tarjeta de desarrollo DualMCU aprovechando las capacidades del ESP32.
+
+>**NOTA** En esta práctica, se utilizará el **ESP32**.
+
 ### Descripción
 
 La DualMCU no solo se distingue por su capacidad de dos microcontroladores, sino que también aprovecha la funcionalidad del ESP32 como servidor y cliente al conectarse a una red local. Este proyecto requiere una sólida base en electrónica y programación de diversas áreas, ya que, a pesar de su aparente simplicidad, exige experiencia en ambas disciplinas.
