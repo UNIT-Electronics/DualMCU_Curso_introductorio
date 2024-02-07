@@ -59,9 +59,12 @@ Otra opción de conexión es directamente en los pines de comunicación I2C QWII
 Para facilitar la programación con la pantalla OLED, hemos identificado una librería específica para OLED. Te proporcionamos una alternativa práctica: copia el código y guarda el archivo como **ssd1306.py** en la DualMCU.
 <div style="text-align: right;">
     <a href="/docs/10-Control_de_pantalla_OLED/code/ssd1306.py" download="ssd1306.py">
-        <button>ssd1306.py</button>
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download ssd1306.py
+        </button>
     </a>
 </div>
+
 
 ```py
 # MicroPython SSD1306 OLED driver, I2C and SPI interfaces
