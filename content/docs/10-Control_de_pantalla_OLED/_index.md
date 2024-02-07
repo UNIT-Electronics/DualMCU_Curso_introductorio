@@ -363,7 +363,7 @@ while True:
 ### Conclusiones
 Durante el desarrollo de la práctica, se evidenció con éxito la configuración de la comunicación I2C con la pantalla OLED, destacando la importancia de emplear una librería compatible con el dispositivo utilizado. Es crucial tener en cuenta el propósito específico del sistema, ya que puede adaptarse tanto a sensores analógicos como digitales.
 
-En este contexto, se invita a replicar la misma práctica utilizando el micro RP2040, ya que se cuenta con la disponibilidad del conector QWIIC para facilitar la conexión. Se destaca la necesidad de ajustar la configuración del puerto I2C según los pines correspondientes al RP2040..
+En este contexto, se invita a replicar la misma práctica utilizando el micro RP2040, ya que se cuenta con la disponibilidad del conector QWIIC para facilitar la conexión. Se destaca la necesidad de ajustar la configuración del puerto I2C según los pines correspondientes al RP2040.
 
 
 
