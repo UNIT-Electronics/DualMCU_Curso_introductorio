@@ -30,7 +30,7 @@ El código proporcionado implementa dos hilos en MicroPython para el ESP32. Un h
 
 ###	 Requisitos
 
-En la presente práctica, los componentes electrónicos se encuentran íntegramente integrados en la placa de desarrollo.
+En la presente práctica, los componentes electrónicos se encuentran integrados en la placa de desarrollo.
 - <a href="https://uelectronics.com/producto/unit-dualmcu-esp32-rp2040-tarjeta-de-desarrollo/" target="_blank">Placa UNIT  DualMCU</a>
 - <a href="https://uelectronics.com/producto/cable-usb-tipo-c-3a-6a/" target="_blank">Cable USB Tipo C</a>
 
