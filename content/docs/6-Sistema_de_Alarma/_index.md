@@ -37,7 +37,7 @@ Adicional, para la realización de la programación de  DualMCU tendrá que enco
 </div>
 
 ###  Código
-A continuación te presentamos el siguiente programa para manejar el sensor de movimiento AM312  y activar una alarma sonora mediante un buzzer activo.. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
+A continuación te presentamos el siguiente programa para manejar el sensor de movimiento AM312  y activar una alarma sonora mediante un buzzer activo. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
 
 ```python
  
