@@ -44,6 +44,14 @@ Después de conectar la UNIT DUALMCU al ordenador, procede a encender el disposi
 ### Código
 Usa el siguiente código para comprobar el fucionamiento de la instalación del firmware de micropython. Asegúrate de tener seleccionado el MCU ESP32 y carga el siguiente código. 
 
+<div style="text-align: right;">
+    <a href="/docs/3-Led_intermitente/code/blink.py" download="ssd1306.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download blink.py
+        </button>
+    </a>
+</div>
+
 ```py
 '''
 Unit Electronics 2023
@@ -76,7 +84,6 @@ def loop():
 loop()
 ```
 
-
 El código proporcionado tiene como objetivo probar la configuración de la instalación de MicroPython en el ESP32. Este código enciende los tres LEDs y luego los apaga en un intervalo de 1 segundo. Puedes personalizar el código para ajustar la frecuencia del parpadeo del LED. Por ejemplo, al modificar el valor dentro de la función 'time.sleep(1)' a 'time.sleep(0.5)', el LED parpadeará cada 0.5 segundos en lugar de 1 segundo. Se muestra a continuación el funcionamiento: 
 ### Resultados
 Se puede visualizar el funcionamiento en el siguiente gif:
@@ -91,6 +98,7 @@ Se puede visualizar el funcionamiento en el siguiente gif:
 1. Abre Thonny y copia el código proporcionado a continuación.
 
 1. Pega el código en Thonny y ejecútalo para visualizar el comportamiento del LED correspondiente al RP2040.
+
 ```py
 '''
 Unit Electronics 2023
