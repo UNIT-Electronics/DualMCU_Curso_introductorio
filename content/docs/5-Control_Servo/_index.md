@@ -86,10 +86,6 @@ except KeyboardInterrupt:
     # Detén el PWM y limpia los recursos al interrumpir el programa con Ctrl+C
     pwm.deinit()
     print("\nPWM detenido. Recursos liberados.")
-
-
-
-
 ```
 
 
