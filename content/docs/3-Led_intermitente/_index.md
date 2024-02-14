@@ -45,7 +45,7 @@ Después de conectar la UNIT DUALMCU al ordenador, procede a encender el disposi
 Usa el siguiente código para comprobar el fucionamiento de la instalación del firmware de micropython. Asegúrate de tener seleccionado el MCU ESP32 y carga el siguiente código. 
 
 <div style="text-align: right;">
-    <a href="/docs/3-Led_intermitente/code/blink.py" download="ssd1306.py">
+    <a href="/docs/3-Led_intermitente/code/blink.py" download="blink.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
             Download blink.py
         </button>
