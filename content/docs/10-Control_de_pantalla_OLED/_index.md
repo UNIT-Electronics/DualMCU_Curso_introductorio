@@ -294,9 +294,9 @@ Ten en cuenta que este es solo un esquema y necesitarás implementar las funcion
 
 
 <div style="text-align: right;">
-    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled2.py" download="unitRP2040_oled2.py">
+    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled2.py" download="unitESP32_oled2.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-            Download unitRP2040_oled2.py
+            Download unitESP32_oled2.py
         </button>
     </a>
 </div>
