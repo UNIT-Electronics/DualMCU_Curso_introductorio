@@ -239,9 +239,9 @@ Posteriormente guarda el anterior código en la Dual MCU bajo el nombre de **ssd
 Una vez guardado el programa anterior, procederemos a abrir un nuevo programa y realizar el siguiente código que tiene como finalidad la visualización de la leyenda **“UNIT ELECTRONCS”**
 
 <div style="text-align: right;">
-    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled.py" download="unitRP2040_oled.py">
+    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled.py" download="unitESP32_oled.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-            Download unitRP2040_oled.py
+            Download unitESP32_oled.py
         </button>
     </a>
 </div>
