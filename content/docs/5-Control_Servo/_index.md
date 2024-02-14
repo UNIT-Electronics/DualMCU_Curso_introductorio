@@ -41,7 +41,7 @@ A continuación, se presenta el diagrama de conexión, el cual es bastante senci
 
 El código de ejemplo para el RP2040 configura una salida destinada al servomotor y controla el mismo utilizando la salida GPIO 0.
 <div style="text-align: right;">
-    <a href="/docs/4-Sensor_de_temperatura/code/unitRP2040_pwm.py" download="unitRP2040_pwm.py">
+    <a href="/docs/5-Control_Servo/code/unitRP2040_pwm.py" download="unitRP2040_pwm.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
             Download unitRP2040_pwm.py
         </button>
@@ -99,7 +99,7 @@ except KeyboardInterrupt:
 Este código proporciona una base sólida para el control de servomotores con el RP2040 y es fácilmente adaptable a las especificaciones particulares de cualquier servomotor. La capacidad de ajustar la configuración, frecuencia y ángulos hace que este código sea versátil y aplicable a una variedad de proyectos que requieran control preciso de servomotores.
 
 <div style="text-align: right;">
-    <a href="/docs/4-Sensor_de_temperatura/code/unitRP2040_servo.py" download="unitRP2040_servo.py">
+    <a href="/docs/5-Control_Servo/code/unitRP2040_servo.py" download="unitRP2040_servo.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
             Download unitRP2040_servo.py
         </button>
