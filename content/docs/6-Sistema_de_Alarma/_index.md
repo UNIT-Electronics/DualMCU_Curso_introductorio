@@ -39,9 +39,9 @@ Adicional, para la realización de la programación de  DualMCU tendrá que enco
 ###  Código
 A continuación te presentamos el siguiente programa para manejar el sensor de movimiento AM312  y activar una alarma sonora mediante un buzzer activo. El código se puede utilizar como punto de partida para crear un sistema de alarma personalizado.
 <div style="text-align: right;">
-    <a href="/docs/6-Sistema_de_Alarma/code/unitRP2040_pir.py" download="unitRP2040_pir.py">
+    <a href="/docs/6-Sistema_de_Alarma/code/unitRP2040_pir.py" download="unitESP32_pir.py">
         <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
-            Download unitRP2040_pir.py
+            Download unitESP32_pir.py
         </button>
     </a>
 </div>
