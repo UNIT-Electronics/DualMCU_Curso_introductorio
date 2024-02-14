@@ -82,7 +82,16 @@ npm -v
 Node.js es un framework que interpreta comandos que le envías. Para probar tu instalación, puedes crear un script de prueba siguiendo estos pasos:
 
 - Abre tu editor de preferencia.
-Copia y pega este [código](./App/app.js):
+Copia y pega este [código](https://github.com/UNIT-Electronics/DualMCU_ESP32_Panel_de_control_Web/blob/main/Docs/App/app.js):
+
+<div style="text-align: right;">
+    <a href="/docs/11-Comunicacion_inalambrica/code/app.js" download="app.js">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download app.js
+        </button>
+    </a>
+</div>
+
     ```javascript
     var http = require('http');
     http.createServer(function (req, res) {
@@ -166,7 +175,16 @@ Reemplaza tu_host por la dirección IP, por ejemplo:
 server_url = "http://192.168.0.2:3000/endpoint" 
 ```
 
+
 ###  Código
+
+<div style="text-align: right;">
+    <a href="/docs/11-Comunicacion_inalambrica/code/unitESP32_wireless.py" download="unitESP32_wireless.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitESP32_wireless.py
+        </button>
+    </a>
+</div>
 
 ```PY
 import network

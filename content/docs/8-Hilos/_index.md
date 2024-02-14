@@ -42,6 +42,14 @@ El código crea dos hilos: uno para incrementar una variable compartida y otro p
 
 Los hilos se ejecutan durante 10 segundos antes de finalizar.
 
+<div style="text-align: right;">
+    <a href="/docs/8-Hilos/code/unitRP2040_threads.py" download="unitRP2040_threads.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_threads.py
+        </button>
+    </a>
+</div>
+
 ```py
 '''
 Unit Electronics 2023

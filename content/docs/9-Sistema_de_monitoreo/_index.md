@@ -31,12 +31,23 @@ A continuación se presenta el diagrama de conexión entre los sensores DHT11 y 
 </div>
 
 > **NOTA:** Para la realización de la práctica la Dual MCU tendrá que encontrarse en la configuración de uso en ESP32, dependiendo del código que quieras utilizar.
->       
+> 
+
 <div style="text-align: center;">
     <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
     </div>
 
 ###  Código
+
+
+<div style="text-align: right;">
+    <a href="/docs/9-Sistema_de_monitoreo/code/unitESP32_dth11.py" download="unitESP32_dth11.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitESP32_dth11.py
+        </button>
+    </a>
+</div>
+
 ```python
 '''
 Unit Electronics 2024

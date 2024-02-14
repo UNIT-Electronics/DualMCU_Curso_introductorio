@@ -238,6 +238,14 @@ Posteriormente guarda el anterior código en la Dual MCU bajo el nombre de **ssd
 
 Una vez guardado el programa anterior, procederemos a abrir un nuevo programa y realizar el siguiente código que tiene como finalidad la visualización de la leyenda **“UNIT ELECTRONCS”**
 
+<div style="text-align: right;">
+    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled.py" download="unitRP2040_oled.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_oled.py
+        </button>
+    </a>
+</div>
+
 ```py 
 '''
 Unit Electronics 2023
@@ -285,6 +293,13 @@ Ahora será tú turno de desplegar información proveniente de algún sensor, ad
 Ten en cuenta que este es solo un esquema y necesitarás implementar las funciones `getCurrentTime`, `createCountdown` y `readSensorData` según tus necesidades. También necesitarás incluir las librerías adecuadas para tu microcontrolador y sensores.
 
 
+<div style="text-align: right;">
+    <a href="/docs/10-Control_de_pantalla_OLED/code/unitRP2040_oled2.py" download="unitRP2040_oled2.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_oled2.py
+        </button>
+    </a>
+</div>
 
 ```python
 from machine import Pin, I2C

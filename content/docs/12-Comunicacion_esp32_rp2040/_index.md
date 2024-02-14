@@ -55,6 +55,14 @@ El proceso se lleva a cabo en dos partes. La primera etapa implica la carga del 
 
 Copia el siguiente código:
 
+<div style="text-align: right;">
+    <a href="/docs/12-Comunicacion_esp32_rp2040/codes/unitR2040_send.py" download="unitR2040_send.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitR2040_send.py
+        </button>
+    </a>
+</div>
+
 ```py
 '''
 rp2040
@@ -123,6 +131,14 @@ Te aparecerá una ventana en la que deberás escribir el nombre **main.py** y fi
     <img src="/docs/2-Micropython/images/selector.png" alt="Block Diagram" title="Block Diagram" style="width: 600px;">
 </div>
 Copia el siguiente código:
+
+<div style="text-align: right;">
+    <a href="/docs/12-Comunicacion_esp32_rp2040/codes/unitESP32.py" download="unitESP32.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitESP32.py
+        </button>
+    </a>
+</div>
 
 ```py
 '''

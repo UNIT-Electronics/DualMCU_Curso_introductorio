@@ -68,6 +68,14 @@ Si quieres realizar la práctica utilizando el microcontrolador ESP32 utiliza el
 ####  Código
 Estos dos códigos muestran ejemplos de cómo utilizar el sensor de temperatura LM35 con dos microcontroladores diferentes: el RP2040 y el ESP32. En ambos casos, se configura la entrada analógica para leer la salida del LM35 y se realiza la lectura de la temperatura en grados Celsius.
 
+<div style="text-align: right;">
+    <a href="/docs/4-Sensor_de_temperatura/code/unitESP32_adc.py" download="unitRP2040_adc.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_adc.py
+        </button>
+    </a>
+</div>
+
 ```python
 '''
 Unit Electronics 2024
@@ -102,6 +110,13 @@ while True:
 
 El código para el RP2040 utiliza MicroPython y Thonny para imprimir las lecturas de temperatura en el monitor serial. Se configura el pin de entrada analógica, se lee el valor del LM35 en milivoltios, se convierte a grados Celsius y se imprime en el formato deseado. El bucle infinito asegura que las lecturas se realicen continuamente con un intervalo de espera de un segundo.
 
+<div style="text-align: right;">
+    <a href="/docs/4-Sensor_de_temperatura/code/unitESP32_adc.py" download="unitESP32_adc.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitESP32_adc.py
+        </button>
+    </a>
+</div>
 
 ```python
 '''

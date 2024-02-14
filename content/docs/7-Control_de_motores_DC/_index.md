@@ -79,6 +79,14 @@ Una vez realizadas las conexiones para un motor puedes controlar dicho motor de 
     <img src="/docs/2-Micropython/images/esp32_or_rasp.jpg" alt="Block Diagram" title="Block Diagram" style="width: 300px;">
     </div>
 
+<div style="text-align: right;">
+    <a href="/docs/7-Control_de_motores_DC/code/unitRP2040_motors1.py" download="unitRP2040_motors1.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_motors1.py
+        </button>
+    </a>
+</div>
+
 ```python
 from machine import Pin
 import time
@@ -115,6 +123,14 @@ l298n_enable.off()
 ```
 El siguiente paso es controlar la velocidad del motor, tendrás que hacer uso de PWM para este fin. La velocidad máxima del motor la logras con el valor 65536, te recomendamos hacer pruebas con diferentes valores para encontrar las velocidades adecuadas a tus proyectos. 
 ####  Comprobar los valores de PWM para diferentes velocidades, empezando con el valor mínimo y máximo.
+
+<div style="text-align: right;">
+    <a href="/docs/7-Control_de_motores_DC/code/unitRP2040_motors2.py" download="unitRP2040_motors2.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_motors2.py
+        </button>
+    </a>
+</div>
 
 ```python
 from machine import Pin, PWM
@@ -169,6 +185,15 @@ l298n_enable.off()
 ```
 
 Tomando de base los códigos anteriores podemos controlar dos motores DC utilizando el driver L298N a la vez con ayuda del siguiente código, donde se controla la velocidad, dirección y el encendido y apagado de los motores. 
+
+
+<div style="text-align: right;">
+    <a href="/docs/7-Control_de_motores_DC/code/unitRP2040_motors3.py" download="unitRP2040_motors3.py">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Download unitRP2040_motors3.py
+        </button>
+    </a>
+</div>
 
 ```py
 from machine import Pin, PWM
@@ -234,7 +259,7 @@ pwm4.duty_u16(motor_speed)
 time.sleep(2)
 
 l298n_enableA.off()
-l298n_enableB.off(
+l298n_enableB.off()
 
 ```
 > **Nota:** Ten en cuenta que este código es un ejemplo y puede que necesites ajustarlo según tu configuración específica y tus necesidades.
