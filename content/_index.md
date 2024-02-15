@@ -1,10 +1,10 @@
 ---
-title: Introduccióna la DualMCU
+title: Introducción a la DualMCU
 type: docs
 BookToC: false
 ---
 
-# Introduccióna la DualMCU - MicroPython 
+# Introducción a la DualMCU - MicroPython 
 
 Bienvenido al repositorio de prácticas para la placa de desarrollo <a href="https://github.com/UNIT-Electronics/DualMCU" target="_blank">tarjeta de desarrollo UNIT DUALMCU </a>, una plataforma poderosa que combina las capacidades del ESP32 y el RP2040. Este repositorio está diseñado para proporcionar una guía paso a paso en la exploración y desarrollo de aplicaciones con esta placa, abordando desde los conceptos básicos hasta proyectos intermedios.
 

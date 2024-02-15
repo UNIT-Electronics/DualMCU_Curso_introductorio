@@ -92,13 +92,13 @@ Copia y pega este [código](https://github.com/UNIT-Electronics/DualMCU_ESP32_Pa
     </a>
 </div>
 
-    ```javascript
-    var http = require('http');
-    http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end('Hello World!');
-    }).listen(8080);
-    ```
+```javascript
+var http = require('http');
+http.createServer(function (req, res) {
+res.writeHead(200, {'Content-Type': 'text/html'});
+res.end('Hello World!');
+}).listen(8080);
+```
 - Guarda el archivo como '**app.js**', asegurándote de recordar la ruta de almacenamiento.
 - Abre la consola de comandos en la ubicación donde se encuentra el archivo 'app.js' y ejecuta el siguiente comando:
     ```
