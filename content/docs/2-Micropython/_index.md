@@ -8,8 +8,8 @@ BookToC: false
 
 Este apartado se presenta un ejemplo básico de cómo instalar MicroPython en la DualMCU utilizando el microcontrolador ESP32 y el RP2040. Nuestra meta principal es que encuentres este recurso útil, permitiéndote integrar partes de esta implementación directamente en tus proyectos.
 
-- [Firware ESP32](#actualización-de-firmware-esp32)
-- [Firware RP2040](#actualización-de-firmware-rp2040)
+- [Firmware ESP32](#actualización-de-firmware-esp32)
+- [Firmware RP2040](#actualización-de-firmware-rp2040)
 
 A continuación, se proporciona un diagrama de conexión extremadamente sencillo: simplemente conecta la UNIT DUALMCU a tu laptop o computadora de escritorio mediante un cable USB Tipo C. Este paso inicial te permitirá explorar y aprovechar las funcionalidades de MicroPython de manera rápida y eficiente. ¡Esperamos que esta guía simplificada te sea de gran utilidad en tus futuros proyectos!
 
