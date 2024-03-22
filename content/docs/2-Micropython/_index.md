@@ -4,7 +4,7 @@ type: docs
 weight: 2
 BookToC: false
 ---
-# DualMCU ESP32: MicroPython
+# DualMCU: MicroPython
 
 Este apartado se presenta un ejemplo básico de cómo instalar MicroPython en la DualMCU utilizando el microcontrolador ESP32. Nuestra meta principal es que encuentres este recurso útil, permitiéndote integrar partes de esta implementación directamente en tus proyectos.
 
