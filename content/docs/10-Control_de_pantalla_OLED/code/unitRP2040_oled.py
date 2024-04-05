@@ -12,7 +12,7 @@ tested code mark
 import machine
 from ssd1306 import SSD1306_I2C
 
-i2c = machine.I2C(sda=machine.Pin(22), scl=machine.Pin(21))
+i2c = machine.I2C(sda=machine.Pin(21), scl=machine.Pin(22))
 
 oled = SSD1306_I2C(128, 32, i2c)
 
