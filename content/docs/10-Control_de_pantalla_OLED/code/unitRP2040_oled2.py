@@ -1,15 +1,15 @@
-from machine import Pin, I2C
-import ssd1306
-import time
 
-# Inicializar I2C
-i2c = I2C(0, scl=Pin(21), sda=Pin(22))
+import time
+import machine
+from ssd1306 import SSD1306_I2C
+
+i2c = machine.I2C(sda=machine.Pin(21), scl=machine.Pin(22))
 count = 100
 segundos = 0
 minutos = 15
 horas = 10
 # Inicializar la pantalla OLED
-display = ssd1306.SSD1306_I2C(128, 64, i2c)
+display = SSD1306_I2C(128, 64, i2c)
 
 def get_current_time():
     global segundos
