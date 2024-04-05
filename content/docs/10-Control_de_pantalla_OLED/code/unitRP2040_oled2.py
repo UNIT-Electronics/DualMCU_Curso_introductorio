@@ -3,7 +3,7 @@ import ssd1306
 import time
 
 # Inicializar I2C
-i2c = machine.I2C(0, scl=machine.Pin(21), sda=machine.Pin(22))
+i2c = I2C(0, scl=Pin(21), sda=Pin(22))
 count = 100
 segundos = 0
 minutos = 15
