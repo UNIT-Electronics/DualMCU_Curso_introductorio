@@ -1,18 +1,16 @@
 '''
-Unit Electronics 2023
           (o_
    (o_    //\
    (/)_   V_/_ 
-tested code mark
-   version: 0.0.1
-   revision: 0.0.1
-
+   tested code mark
+   version: 0.0.2
+   revision: 0.0.2 (2024)
 '''
 
 import machine
 from ssd1306 import SSD1306_I2C
 
-i2c = machine.I2C(sda=machine.Pin(21), scl=machine.Pin(22))
+i2c = machine.SoftI2C(sda=machine.Pin(21), scl=machine.Pin(22))
 
 oled = SSD1306_I2C(128, 32, i2c)
 
